@@ -1,0 +1,1 @@
+https://sdataprod.ncaa.com/?operationName=scores_bracket_web&variables={"seasonYear":2024}&extensions={"persistedQuery":{"version":1,"sha256Hash":"9b3e0ae3018a2c3cc81877867705189763367a6fca416a36e5196bb4851470a4"}}

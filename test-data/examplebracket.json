@@ -1,0 +1,4093 @@
+{
+  "data": {
+    "mmlContests": [
+      {
+        "bracketId": 101,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/19/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 209,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Four&#174;",
+          "subtitle": "3/19-3/20",
+          "roundNumber": 1,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 1,
+          "position": "TT",
+          "title": "",
+          "abbreviation": "",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 68,
+            "color": "#C8102E",
+            "ncaaOrgId": 290,
+            "seed": 16,
+            "seoname": "howard",
+            "nickname": "Bison",
+            "nameShort": "Howard",
+            "name6Char": "HOW",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 71,
+            "color": "#034638",
+            "ncaaOrgId": 748,
+            "seed": 16,
+            "seoname": "wagner",
+            "nickname": "Seahawks",
+            "nameShort": "Wagner",
+            "name6Char": "WAGNR",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 102,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/19/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 231,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Four&#174;",
+          "subtitle": "3/19-3/20",
+          "roundNumber": 1,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 1,
+          "position": "TT",
+          "title": "",
+          "abbreviation": "",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 67,
+            "color": "#2C5234",
+            "ncaaOrgId": 156,
+            "seed": 10,
+            "seoname": "colorado-st",
+            "nickname": "Rams",
+            "nameShort": "Colorado St.",
+            "name6Char": "CSU",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 42,
+            "color": "#232D4B",
+            "ncaaOrgId": 746,
+            "seed": 10,
+            "seoname": "virginia",
+            "nickname": "Cavaliers",
+            "nameShort": "Virginia",
+            "name6Char": "UVA",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 103,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/20/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 225,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Four&#174;",
+          "subtitle": "3/19-3/20",
+          "roundNumber": 1,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 1,
+          "position": "TT",
+          "title": "",
+          "abbreviation": "",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 88,
+            "color": "#010101",
+            "ncaaOrgId": 261,
+            "seed": 16,
+            "seoname": "grambling",
+            "nickname": "Tigers",
+            "nameShort": "Grambling St.",
+            "name6Char": "GRAMB",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 81,
+            "color": "#00205B",
+            "ncaaOrgId": 440,
+            "seed": 16,
+            "seoname": "montana-st",
+            "nickname": "Bobcats",
+            "nameShort": "Montana St.",
+            "name6Char": "MON ST",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 104,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/20/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 223,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Four&#174;",
+          "subtitle": "3/19-3/20",
+          "roundNumber": 1,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 1,
+          "position": "TT",
+          "title": "",
+          "abbreviation": "",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 60,
+            "color": "#010101",
+            "ncaaOrgId": 157,
+            "seed": 10,
+            "seoname": "colorado",
+            "nickname": "Buffaloes",
+            "nameShort": "Colorado",
+            "name6Char": "COLO",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 53,
+            "color": "#0032A0",
+            "ncaaOrgId": 66,
+            "seed": 10,
+            "seoname": "boise-st",
+            "nickname": "Broncos",
+            "nameShort": "Boise St.",
+            "name6Char": "BOISE",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 201,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 301,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 91,
+            "color": "#0C2340",
+            "ncaaOrgId": 164,
+            "seed": 1,
+            "seoname": "uconn",
+            "nickname": "Huskies",
+            "nameShort": "UConn",
+            "name6Char": "UCONN",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 52,
+            "color": "#006747",
+            "ncaaOrgId": 678,
+            "seed": 16,
+            "seoname": "stetson",
+            "nickname": "Hatters",
+            "nameShort": "Stetson",
+            "name6Char": "STET",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 202,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 301,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 65,
+            "color": "#002855",
+            "ncaaOrgId": 229,
+            "seed": 8,
+            "seoname": "fla-atlantic",
+            "nickname": "Owls",
+            "nameShort": "FAU",
+            "name6Char": "FAU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 77,
+            "color": "#4E2A84",
+            "ncaaOrgId": 509,
+            "seed": 9,
+            "seoname": "northwestern",
+            "nickname": "Wildcats",
+            "nameShort": "Northwestern",
+            "name6Char": "NW",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 203,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 302,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 69,
+            "color": "#A6192E",
+            "ncaaOrgId": 626,
+            "seed": 5,
+            "seoname": "san-diego-st",
+            "nickname": "Aztecs",
+            "nameShort": "San Diego St.",
+            "name6Char": "SDSU",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 65,
+            "color": "#006341",
+            "ncaaOrgId": 9,
+            "seed": 12,
+            "seoname": "uab",
+            "nickname": "Blazers",
+            "nameShort": "UAB",
+            "name6Char": "UAB",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 204,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 302,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 76,
+            "color": "#FA4616",
+            "ncaaOrgId": 37,
+            "seed": 4,
+            "seoname": "auburn",
+            "nickname": "Tigers",
+            "nameShort": "Auburn",
+            "name6Char": "AUB",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 78,
+            "color": "#111C2C",
+            "ncaaOrgId": 813,
+            "seed": 13,
+            "seoname": "yale",
+            "nickname": "Bulldogs",
+            "nameShort": "Yale",
+            "name6Char": "YALE",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 205,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 303,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 67,
+            "color": "#213C84",
+            "ncaaOrgId": 77,
+            "seed": 6,
+            "seoname": "byu",
+            "nickname": "Cougars",
+            "nameShort": "BYU",
+            "name6Char": "BYU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 71,
+            "color": "#BA0C2F",
+            "ncaaOrgId": 194,
+            "seed": 11,
+            "seoname": "duquesne",
+            "nickname": "Dukes",
+            "nameShort": "Duquesne",
+            "name6Char": "DUQ",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 206,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 303,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 85,
+            "color": "#F15A22",
+            "ncaaOrgId": 301,
+            "seed": 3,
+            "seoname": "illinois",
+            "nickname": "Fighting Illini",
+            "nameShort": "Illinois",
+            "name6Char": "ILL",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 69,
+            "color": "#0032A0",
+            "ncaaOrgId": 444,
+            "seed": 14,
+            "seoname": "morehead-st",
+            "nickname": "Eagles",
+            "nameShort": "Morehead St.",
+            "name6Char": "MREHD",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 207,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 304,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 66,
+            "color": "#9D2235",
+            "ncaaOrgId": 754,
+            "seed": 7,
+            "seoname": "washington-st",
+            "nickname": "Cougars",
+            "nameShort": "Washington St.",
+            "name6Char": "WAZZU",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 61,
+            "color": "#002F6C",
+            "ncaaOrgId": 189,
+            "seed": 10,
+            "seoname": "drake",
+            "nickname": "Bulldogs",
+            "nameShort": "Drake",
+            "name6Char": "DRAKE",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 208,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 304,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 82,
+            "color": "#A6192E",
+            "ncaaOrgId": 311,
+            "seed": 2,
+            "seoname": "iowa-st",
+            "nickname": "Cyclones",
+            "nameShort": "Iowa St.",
+            "name6Char": "IA ST",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 65,
+            "color": "#0032A0",
+            "ncaaOrgId": 649,
+            "seed": 15,
+            "seoname": "south-dakota-st",
+            "nickname": "Jackrabbits",
+            "nameShort": "South Dakota St.",
+            "name6Char": "SDAKST",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 209,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 305,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 90,
+            "color": "#7BAFD4",
+            "ncaaOrgId": 457,
+            "seed": 1,
+            "seoname": "north-carolina",
+            "nickname": "Tar Heels",
+            "nameShort": "North Carolina",
+            "name6Char": "UNC",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 62,
+            "color": "#034638",
+            "ncaaOrgId": 748,
+            "seed": 16,
+            "seoname": "wagner",
+            "nickname": "Seahawks",
+            "nameShort": "Wagner",
+            "name6Char": "WAGNR",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 210,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 305,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 51,
+            "color": "#5D1725",
+            "ncaaOrgId": 430,
+            "seed": 8,
+            "seoname": "mississippi-st",
+            "nickname": "Bulldogs",
+            "nameShort": "Mississippi St.",
+            "name6Char": "MS ST",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 69,
+            "color": "#173F35",
+            "ncaaOrgId": 416,
+            "seed": 9,
+            "seoname": "michigan-st",
+            "nickname": "Spartans",
+            "nameShort": "Michigan St.",
+            "name6Char": "MSU",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 211,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 306,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 66,
+            "color": "#E51B24",
+            "ncaaOrgId": 610,
+            "seed": 5,
+            "seoname": "st-marys-ca",
+            "nickname": "Gaels",
+            "nameShort": "Saint Mary's",
+            "name6Char": "STMARY",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 75,
+            "color": "#623493",
+            "ncaaOrgId": 1104,
+            "seed": 12,
+            "seoname": "grand-canyon",
+            "nickname": "Lopes",
+            "nameShort": "Grand Canyon",
+            "name6Char": "GCU",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 212,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 306,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 109,
+            "color": "#9D2235",
+            "ncaaOrgId": 8,
+            "seed": 4,
+            "seoname": "alabama",
+            "nickname": "Crimson Tide",
+            "nameShort": "Alabama",
+            "name6Char": "BAMA",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 96,
+            "color": "#76232F",
+            "ncaaOrgId": 1014,
+            "seed": 13,
+            "seoname": "col-of-charleston",
+            "nickname": "Cougars",
+            "nameShort": "Charleston",
+            "name6Char": "COFC",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 213,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 307,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 77,
+            "color": "#FF6720",
+            "ncaaOrgId": 147,
+            "seed": 6,
+            "seoname": "clemson",
+            "nickname": "Tigers",
+            "nameShort": "Clemson",
+            "name6Char": "CLEM",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 56,
+            "color": "#BA0C2F",
+            "ncaaOrgId": 473,
+            "seed": 11,
+            "seoname": "new-mexico",
+            "nickname": "Lobos",
+            "nameShort": "New Mexico",
+            "name6Char": "UNM",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 214,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 307,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 92,
+            "color": "#1B3E30",
+            "ncaaOrgId": 51,
+            "seed": 3,
+            "seoname": "baylor",
+            "nickname": "Bears",
+            "nameShort": "Baylor",
+            "name6Char": "BAY",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 67,
+            "color": "#772430",
+            "ncaaOrgId": 153,
+            "seed": 14,
+            "seoname": "colgate",
+            "nickname": "Raiders",
+            "nameShort": "Colgate",
+            "name6Char": "GATE",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 215,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 308,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 63,
+            "color": "#D50032",
+            "ncaaOrgId": 175,
+            "seed": 7,
+            "seoname": "dayton",
+            "nickname": "Flyers",
+            "nameShort": "Dayton",
+            "name6Char": "DAY",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 60,
+            "color": "#041E42",
+            "ncaaOrgId": 466,
+            "seed": 10,
+            "seoname": "nevada",
+            "nickname": "Wolf Pack",
+            "nameShort": "Nevada",
+            "name6Char": "NEV",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 216,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 308,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 85,
+            "color": "#C21B32",
+            "ncaaOrgId": 29,
+            "seed": 2,
+            "seoname": "arizona",
+            "nickname": "Wildcats",
+            "nameShort": "Arizona",
+            "name6Char": "ZONA",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 65,
+            "color": "#010101",
+            "ncaaOrgId": 99,
+            "seed": 15,
+            "seoname": "long-beach-st",
+            "nickname": "Beach",
+            "nameShort": "Long Beach St.",
+            "name6Char": "BEACH",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 217,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 309,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 86,
+            "color": "#E51636",
+            "ncaaOrgId": 288,
+            "seed": 1,
+            "seoname": "houston",
+            "nickname": "Cougars",
+            "nameShort": "Houston",
+            "name6Char": "HOU",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 46,
+            "color": "#041E42",
+            "ncaaOrgId": 363,
+            "seed": 16,
+            "seoname": "longwood",
+            "nickname": "Lancers",
+            "nameShort": "Longwood",
+            "name6Char": "LWOOD",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 218,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 309,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 83,
+            "color": "#C8102E",
+            "ncaaOrgId": 463,
+            "seed": 8,
+            "seoname": "nebraska",
+            "nickname": "Cornhuskers",
+            "nameShort": "Nebraska",
+            "name6Char": "NEB",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 98,
+            "color": "#5D0025",
+            "ncaaOrgId": 697,
+            "seed": 9,
+            "seoname": "texas-am",
+            "nickname": "Aggies",
+            "nameShort": "Texas A&M",
+            "name6Char": "TX A&M",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 219,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 310,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 61,
+            "color": "#BA0C2F",
+            "ncaaOrgId": 796,
+            "seed": 5,
+            "seoname": "wisconsin",
+            "nickname": "Badgers",
+            "nameShort": "Wisconsin",
+            "name6Char": "WIS",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 72,
+            "color": "#330072",
+            "ncaaOrgId": 317,
+            "seed": 12,
+            "seoname": "james-madison",
+            "nickname": "Dukes",
+            "nameShort": "James Madison",
+            "name6Char": "JMU",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 220,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 310,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 64,
+            "color": "#002D72",
+            "ncaaOrgId": 193,
+            "seed": 4,
+            "seoname": "duke",
+            "nickname": "Blue Devils",
+            "nameShort": "Duke",
+            "name6Char": "DUKE",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 47,
+            "color": "#154734",
+            "ncaaOrgId": 738,
+            "seed": 13,
+            "seoname": "vermont",
+            "nickname": "Catamounts",
+            "nameShort": "Vermont",
+            "name6Char": "VRMNT",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 221,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 311,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 67,
+            "color": "#ED1F2A",
+            "ncaaOrgId": 700,
+            "seed": 6,
+            "seoname": "texas-tech",
+            "nickname": "Red Raiders",
+            "nameShort": "Texas Tech",
+            "name6Char": "TTU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 80,
+            "color": "#C8102E",
+            "ncaaOrgId": 490,
+            "seed": 11,
+            "seoname": "north-carolina-st",
+            "nickname": "Wolfpack",
+            "nameShort": "NC State",
+            "name6Char": "NC ST",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 222,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 311,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 76,
+            "color": "#3258AF",
+            "ncaaOrgId": 334,
+            "seed": 3,
+            "seoname": "kentucky",
+            "nickname": "Wildcats",
+            "nameShort": "Kentucky",
+            "name6Char": "UK",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 80,
+            "color": "#927F3B",
+            "ncaaOrgId": 514,
+            "seed": 14,
+            "seoname": "oakland",
+            "nickname": "Golden Grizzlies",
+            "nameShort": "Oakland",
+            "name6Char": "OAK",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 223,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 312,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 100,
+            "color": "#003087",
+            "ncaaOrgId": 235,
+            "seed": 7,
+            "seoname": "florida",
+            "nickname": "Gators",
+            "nameShort": "Florida",
+            "name6Char": "FLA",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 102,
+            "color": "#010101",
+            "ncaaOrgId": 157,
+            "seed": 10,
+            "seoname": "colorado",
+            "nickname": "Buffaloes",
+            "nameShort": "Colorado",
+            "name6Char": "COLO",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 224,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 312,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 87,
+            "color": "#1D2953",
+            "ncaaOrgId": 387,
+            "seed": 2,
+            "seoname": "marquette",
+            "nickname": "Golden Eagles",
+            "nameShort": "Marquette",
+            "name6Char": "MARQ",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 69,
+            "color": "#C8102E",
+            "ncaaOrgId": 772,
+            "seed": 15,
+            "seoname": "western-ky",
+            "nickname": "Hilltoppers",
+            "nameShort": "Western Ky.",
+            "name6Char": "WKU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 225,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 313,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 78,
+            "color": "#010101",
+            "ncaaOrgId": 559,
+            "seed": 1,
+            "seoname": "purdue",
+            "nickname": "Boilermakers",
+            "nameShort": "Purdue",
+            "name6Char": "PUR",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 50,
+            "color": "#010101",
+            "ncaaOrgId": 261,
+            "seed": 16,
+            "seoname": "grambling",
+            "nickname": "Tigers",
+            "nameShort": "Grambling St.",
+            "name6Char": "GRAMB",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 226,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/22/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 313,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 88,
+            "color": "#00263A",
+            "ncaaOrgId": 731,
+            "seed": 8,
+            "seoname": "utah-st",
+            "nickname": "Aggies",
+            "nameShort": "Utah St.",
+            "name6Char": "UT ST",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 72,
+            "color": "#592D82",
+            "ncaaOrgId": 698,
+            "seed": 9,
+            "seoname": "tcu",
+            "nickname": "Horned Frogs",
+            "nameShort": "TCU",
+            "name6Char": "TCU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 227,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 314,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 86,
+            "color": "#D21F36",
+            "ncaaOrgId": 260,
+            "seed": 5,
+            "seoname": "gonzaga",
+            "nickname": "Bulldogs",
+            "nameShort": "Gonzaga",
+            "name6Char": "GONZ",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 65,
+            "color": "#003087",
+            "ncaaOrgId": 402,
+            "seed": 12,
+            "seoname": "mcneese",
+            "nickname": "Cowboys",
+            "nameShort": "McNeese",
+            "name6Char": "MCNEES",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 228,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 314,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 93,
+            "color": "#1967B8",
+            "ncaaOrgId": 328,
+            "seed": 4,
+            "seoname": "kansas",
+            "nickname": "Jayhawks",
+            "nameShort": "Kansas",
+            "name6Char": "KANSAS",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 89,
+            "color": "#BA0C2F",
+            "ncaaOrgId": 625,
+            "seed": 13,
+            "seoname": "samford",
+            "nickname": "Bulldogs",
+            "nameShort": "Samford",
+            "name6Char": "SAM",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 229,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 315,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 73,
+            "color": "#862633",
+            "ncaaOrgId": 648,
+            "seed": 6,
+            "seoname": "south-carolina",
+            "nickname": "Gamecocks",
+            "nameShort": "South Carolina",
+            "name6Char": "SO CAR",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 87,
+            "color": "#173F35",
+            "ncaaOrgId": 529,
+            "seed": 11,
+            "seoname": "oregon",
+            "nickname": "Ducks",
+            "nameShort": "Oregon",
+            "name6Char": "ORE",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 230,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 315,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 77,
+            "color": "#0032A0",
+            "ncaaOrgId": 169,
+            "seed": 3,
+            "seoname": "creighton",
+            "nickname": "Bluejays",
+            "nameShort": "Creighton",
+            "name6Char": "CREIGH",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 60,
+            "color": "#0F192B",
+            "ncaaOrgId": 5,
+            "seed": 14,
+            "seoname": "akron",
+            "nickname": "Zips",
+            "nameShort": "Akron",
+            "name6Char": "AKRON",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 231,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 316,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 56,
+            "color": "#CB6015",
+            "ncaaOrgId": 703,
+            "seed": 7,
+            "seoname": "texas",
+            "nickname": "Longhorns",
+            "nameShort": "Texas",
+            "name6Char": "TEXAS",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 44,
+            "color": "#2C5234",
+            "ncaaOrgId": 156,
+            "seed": 10,
+            "seoname": "colorado-st",
+            "nickname": "Rams",
+            "nameShort": "Colorado St.",
+            "name6Char": "CSU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 232,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/21/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 316,
+        "mmlVideo": false,
+        "round": {
+          "title": "First Round",
+          "subtitle": "3/21-3/22",
+          "roundNumber": 2,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 83,
+            "color": "#FF8200",
+            "ncaaOrgId": 694,
+            "seed": 2,
+            "seoname": "tennessee",
+            "nickname": "Volunteers",
+            "nameShort": "Tennessee",
+            "name6Char": "TENN",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 49,
+            "color": "#21375C",
+            "ncaaOrgId": 617,
+            "seed": 15,
+            "seoname": "st-peters",
+            "nickname": "Peacocks",
+            "nameShort": "Saint Peter's",
+            "name6Char": "STPETE",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 301,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/24/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 401,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40715",
+          "name": "truTV",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 75,
+            "color": "#0C2340",
+            "ncaaOrgId": 164,
+            "seed": 1,
+            "seoname": "uconn",
+            "nickname": "Huskies",
+            "nameShort": "UConn",
+            "name6Char": "UCONN",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 58,
+            "color": "#4E2A84",
+            "ncaaOrgId": 509,
+            "seed": 9,
+            "seoname": "northwestern",
+            "nickname": "Wildcats",
+            "nameShort": "Northwestern",
+            "name6Char": "NW",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 302,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/24/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 401,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 85,
+            "color": "#A6192E",
+            "ncaaOrgId": 626,
+            "seed": 5,
+            "seoname": "san-diego-st",
+            "nickname": "Aztecs",
+            "nameShort": "San Diego St.",
+            "name6Char": "SDSU",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 57,
+            "color": "#111C2C",
+            "ncaaOrgId": 813,
+            "seed": 13,
+            "seoname": "yale",
+            "nickname": "Bulldogs",
+            "nameShort": "Yale",
+            "name6Char": "YALE",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 303,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/23/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 402,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 63,
+            "color": "#BA0C2F",
+            "ncaaOrgId": 194,
+            "seed": 11,
+            "seoname": "duquesne",
+            "nickname": "Dukes",
+            "nameShort": "Duquesne",
+            "name6Char": "DUQ",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 89,
+            "color": "#F15A22",
+            "ncaaOrgId": 301,
+            "seed": 3,
+            "seoname": "illinois",
+            "nickname": "Fighting Illini",
+            "nameShort": "Illinois",
+            "name6Char": "ILL",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 304,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/23/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 402,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 56,
+            "color": "#9D2235",
+            "ncaaOrgId": 754,
+            "seed": 7,
+            "seoname": "washington-st",
+            "nickname": "Cougars",
+            "nameShort": "Washington St.",
+            "name6Char": "WAZZU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 67,
+            "color": "#A6192E",
+            "ncaaOrgId": 311,
+            "seed": 2,
+            "seoname": "iowa-st",
+            "nickname": "Cyclones",
+            "nameShort": "Iowa St.",
+            "name6Char": "IA ST",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 305,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/23/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 403,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 85,
+            "color": "#7BAFD4",
+            "ncaaOrgId": 457,
+            "seed": 1,
+            "seoname": "north-carolina",
+            "nickname": "Tar Heels",
+            "nameShort": "North Carolina",
+            "name6Char": "UNC",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 69,
+            "color": "#173F35",
+            "ncaaOrgId": 416,
+            "seed": 9,
+            "seoname": "michigan-st",
+            "nickname": "Spartans",
+            "nameShort": "Michigan St.",
+            "name6Char": "MSU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 306,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/24/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 403,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 61,
+            "color": "#623493",
+            "ncaaOrgId": 1104,
+            "seed": 12,
+            "seoname": "grand-canyon",
+            "nickname": "Lopes",
+            "nameShort": "Grand Canyon",
+            "name6Char": "GCU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 72,
+            "color": "#9D2235",
+            "ncaaOrgId": 8,
+            "seed": 4,
+            "seoname": "alabama",
+            "nickname": "Crimson Tide",
+            "nameShort": "Alabama",
+            "name6Char": "BAMA",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 307,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/24/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 404,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 72,
+            "color": "#FF6720",
+            "ncaaOrgId": 147,
+            "seed": 6,
+            "seoname": "clemson",
+            "nickname": "Tigers",
+            "nameShort": "Clemson",
+            "name6Char": "CLEM",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 64,
+            "color": "#1B3E30",
+            "ncaaOrgId": 51,
+            "seed": 3,
+            "seoname": "baylor",
+            "nickname": "Bears",
+            "nameShort": "Baylor",
+            "name6Char": "BAY",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 308,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/23/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 404,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 68,
+            "color": "#D50032",
+            "ncaaOrgId": 175,
+            "seed": 7,
+            "seoname": "dayton",
+            "nickname": "Flyers",
+            "nameShort": "Dayton",
+            "name6Char": "DAY",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 78,
+            "color": "#C21B32",
+            "ncaaOrgId": 29,
+            "seed": 2,
+            "seoname": "arizona",
+            "nickname": "Wildcats",
+            "nameShort": "Arizona",
+            "name6Char": "ZONA",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 309,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/24/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 405,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40720",
+          "name": "TNT",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 100,
+            "color": "#E51636",
+            "ncaaOrgId": 288,
+            "seed": 1,
+            "seoname": "houston",
+            "nickname": "Cougars",
+            "nameShort": "Houston",
+            "name6Char": "HOU",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 95,
+            "color": "#5D0025",
+            "ncaaOrgId": 697,
+            "seed": 9,
+            "seoname": "texas-am",
+            "nickname": "Aggies",
+            "nameShort": "Texas A&M",
+            "name6Char": "TX A&M",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 310,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/24/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 405,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 55,
+            "color": "#330072",
+            "ncaaOrgId": 317,
+            "seed": 12,
+            "seoname": "james-madison",
+            "nickname": "Dukes",
+            "nameShort": "James Madison",
+            "name6Char": "JMU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 93,
+            "color": "#002D72",
+            "ncaaOrgId": 193,
+            "seed": 4,
+            "seoname": "duke",
+            "nickname": "Blue Devils",
+            "nameShort": "Duke",
+            "name6Char": "DUKE",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 311,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/23/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 406,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 79,
+            "color": "#C8102E",
+            "ncaaOrgId": 490,
+            "seed": 11,
+            "seoname": "north-carolina-st",
+            "nickname": "Wolfpack",
+            "nameShort": "NC State",
+            "name6Char": "NC ST",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 73,
+            "color": "#927F3B",
+            "ncaaOrgId": 514,
+            "seed": 14,
+            "seoname": "oakland",
+            "nickname": "Golden Grizzlies",
+            "nameShort": "Oakland",
+            "name6Char": "OAK",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 312,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/24/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 406,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 77,
+            "color": "#010101",
+            "ncaaOrgId": 157,
+            "seed": 10,
+            "seoname": "colorado",
+            "nickname": "Buffaloes",
+            "nameShort": "Colorado",
+            "name6Char": "COLO",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 81,
+            "color": "#1D2953",
+            "ncaaOrgId": 387,
+            "seed": 2,
+            "seoname": "marquette",
+            "nickname": "Golden Eagles",
+            "nameShort": "Marquette",
+            "name6Char": "MARQ",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 313,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/24/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 407,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 106,
+            "color": "#010101",
+            "ncaaOrgId": 559,
+            "seed": 1,
+            "seoname": "purdue",
+            "nickname": "Boilermakers",
+            "nameShort": "Purdue",
+            "name6Char": "PUR",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 67,
+            "color": "#00263A",
+            "ncaaOrgId": 731,
+            "seed": 8,
+            "seoname": "utah-st",
+            "nickname": "Aggies",
+            "nameShort": "Utah St.",
+            "name6Char": "UT ST",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 314,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/23/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 407,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 89,
+            "color": "#D21F36",
+            "ncaaOrgId": 260,
+            "seed": 5,
+            "seoname": "gonzaga",
+            "nickname": "Bulldogs",
+            "nameShort": "Gonzaga",
+            "name6Char": "GONZ",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 68,
+            "color": "#1967B8",
+            "ncaaOrgId": 328,
+            "seed": 4,
+            "seoname": "kansas",
+            "nickname": "Jayhawks",
+            "nameShort": "Kansas",
+            "name6Char": "KANSAS",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 315,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/23/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 408,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 73,
+            "color": "#173F35",
+            "ncaaOrgId": 529,
+            "seed": 11,
+            "seoname": "oregon",
+            "nickname": "Ducks",
+            "nameShort": "Oregon",
+            "name6Char": "ORE",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 86,
+            "color": "#0032A0",
+            "ncaaOrgId": 169,
+            "seed": 3,
+            "seoname": "creighton",
+            "nickname": "Bluejays",
+            "nameShort": "Creighton",
+            "name6Char": "CREIGH",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 316,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/23/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 408,
+        "mmlVideo": false,
+        "round": {
+          "title": "Second Round",
+          "subtitle": "3/23-3/24",
+          "roundNumber": 3,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 58,
+            "color": "#CB6015",
+            "ncaaOrgId": 703,
+            "seed": 7,
+            "seoname": "texas",
+            "nickname": "Longhorns",
+            "nameShort": "Texas",
+            "name6Char": "TEXAS",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 62,
+            "color": "#FF8200",
+            "ncaaOrgId": 694,
+            "seed": 2,
+            "seoname": "tennessee",
+            "nickname": "Volunteers",
+            "nameShort": "Tennessee",
+            "name6Char": "TENN",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 401,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/28/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 501,
+        "mmlVideo": false,
+        "round": {
+          "title": "Sweet 16&#174;",
+          "subtitle": "3/28-3/29",
+          "roundNumber": 4,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 82,
+            "color": "#0C2340",
+            "ncaaOrgId": 164,
+            "seed": 1,
+            "seoname": "uconn",
+            "nickname": "Huskies",
+            "nameShort": "UConn",
+            "name6Char": "UCONN",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 52,
+            "color": "#A6192E",
+            "ncaaOrgId": 626,
+            "seed": 5,
+            "seoname": "san-diego-st",
+            "nickname": "Aztecs",
+            "nameShort": "San Diego St.",
+            "name6Char": "SDSU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 402,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/28/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 501,
+        "mmlVideo": false,
+        "round": {
+          "title": "Sweet 16&#174;",
+          "subtitle": "3/28-3/29",
+          "roundNumber": 4,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 72,
+            "color": "#F15A22",
+            "ncaaOrgId": 301,
+            "seed": 3,
+            "seoname": "illinois",
+            "nickname": "Fighting Illini",
+            "nameShort": "Illinois",
+            "name6Char": "ILL",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 69,
+            "color": "#A6192E",
+            "ncaaOrgId": 311,
+            "seed": 2,
+            "seoname": "iowa-st",
+            "nickname": "Cyclones",
+            "nameShort": "Iowa St.",
+            "name6Char": "IA ST",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 403,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/28/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 502,
+        "mmlVideo": false,
+        "round": {
+          "title": "Sweet 16&#174;",
+          "subtitle": "3/28-3/29",
+          "roundNumber": 4,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 87,
+            "color": "#7BAFD4",
+            "ncaaOrgId": 457,
+            "seed": 1,
+            "seoname": "north-carolina",
+            "nickname": "Tar Heels",
+            "nameShort": "North Carolina",
+            "name6Char": "UNC",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 89,
+            "color": "#9D2235",
+            "ncaaOrgId": 8,
+            "seed": 4,
+            "seoname": "alabama",
+            "nickname": "Crimson Tide",
+            "nameShort": "Alabama",
+            "name6Char": "BAMA",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 404,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/28/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 502,
+        "mmlVideo": false,
+        "round": {
+          "title": "Sweet 16&#174;",
+          "subtitle": "3/28-3/29",
+          "roundNumber": 4,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 77,
+            "color": "#FF6720",
+            "ncaaOrgId": 147,
+            "seed": 6,
+            "seoname": "clemson",
+            "nickname": "Tigers",
+            "nameShort": "Clemson",
+            "name6Char": "CLEM",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 72,
+            "color": "#C21B32",
+            "ncaaOrgId": 29,
+            "seed": 2,
+            "seoname": "arizona",
+            "nickname": "Wildcats",
+            "nameShort": "Arizona",
+            "name6Char": "ZONA",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 405,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/29/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 503,
+        "mmlVideo": false,
+        "round": {
+          "title": "Sweet 16&#174;",
+          "subtitle": "3/28-3/29",
+          "roundNumber": 4,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 51,
+            "color": "#E51636",
+            "ncaaOrgId": 288,
+            "seed": 1,
+            "seoname": "houston",
+            "nickname": "Cougars",
+            "nameShort": "Houston",
+            "name6Char": "HOU",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 54,
+            "color": "#002D72",
+            "ncaaOrgId": 193,
+            "seed": 4,
+            "seoname": "duke",
+            "nickname": "Blue Devils",
+            "nameShort": "Duke",
+            "name6Char": "DUKE",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 406,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/29/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 503,
+        "mmlVideo": false,
+        "round": {
+          "title": "Sweet 16&#174;",
+          "subtitle": "3/28-3/29",
+          "roundNumber": 4,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 67,
+            "color": "#C8102E",
+            "ncaaOrgId": 490,
+            "seed": 11,
+            "seoname": "north-carolina-st",
+            "nickname": "Wolfpack",
+            "nameShort": "NC State",
+            "name6Char": "NC ST",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 58,
+            "color": "#1D2953",
+            "ncaaOrgId": 387,
+            "seed": 2,
+            "seoname": "marquette",
+            "nickname": "Golden Eagles",
+            "nameShort": "Marquette",
+            "name6Char": "MARQ",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 407,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/29/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 504,
+        "mmlVideo": false,
+        "round": {
+          "title": "Sweet 16&#174;",
+          "subtitle": "3/28-3/29",
+          "roundNumber": 4,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 80,
+            "color": "#010101",
+            "ncaaOrgId": 559,
+            "seed": 1,
+            "seoname": "purdue",
+            "nickname": "Boilermakers",
+            "nameShort": "Purdue",
+            "name6Char": "PUR",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 68,
+            "color": "#D21F36",
+            "ncaaOrgId": 260,
+            "seed": 5,
+            "seoname": "gonzaga",
+            "nickname": "Bulldogs",
+            "nameShort": "Gonzaga",
+            "name6Char": "GONZ",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 408,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/29/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 504,
+        "mmlVideo": false,
+        "round": {
+          "title": "Sweet 16&#174;",
+          "subtitle": "3/28-3/29",
+          "roundNumber": 4,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 75,
+            "color": "#0032A0",
+            "ncaaOrgId": 169,
+            "seed": 3,
+            "seoname": "creighton",
+            "nickname": "Bluejays",
+            "nameShort": "Creighton",
+            "name6Char": "CREIGH",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 82,
+            "color": "#FF8200",
+            "ncaaOrgId": 694,
+            "seed": 2,
+            "seoname": "tennessee",
+            "nickname": "Volunteers",
+            "nameShort": "Tennessee",
+            "name6Char": "TENN",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 501,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/30/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 601,
+        "mmlVideo": false,
+        "round": {
+          "title": "Elite Eight&#174;",
+          "subtitle": "3/30-3/31",
+          "roundNumber": 5,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 2,
+          "position": "TL",
+          "title": "EAST",
+          "abbreviation": "E",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 77,
+            "color": "#0C2340",
+            "ncaaOrgId": 164,
+            "seed": 1,
+            "seoname": "uconn",
+            "nickname": "Huskies",
+            "nameShort": "UConn",
+            "name6Char": "UCONN",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 52,
+            "color": "#F15A22",
+            "ncaaOrgId": 301,
+            "seed": 3,
+            "seoname": "illinois",
+            "nickname": "Fighting Illini",
+            "nameShort": "Illinois",
+            "name6Char": "ILL",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 502,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/30/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 601,
+        "mmlVideo": false,
+        "round": {
+          "title": "Elite Eight&#174;",
+          "subtitle": "3/30-3/31",
+          "roundNumber": 5,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 4,
+          "position": "BL",
+          "title": "WEST",
+          "abbreviation": "W",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 89,
+            "color": "#9D2235",
+            "ncaaOrgId": 8,
+            "seed": 4,
+            "seoname": "alabama",
+            "nickname": "Crimson Tide",
+            "nameShort": "Alabama",
+            "name6Char": "BAMA",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 82,
+            "color": "#FF6720",
+            "ncaaOrgId": 147,
+            "seed": 6,
+            "seoname": "clemson",
+            "nickname": "Tigers",
+            "nameShort": "Clemson",
+            "name6Char": "CLEM",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 503,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/31/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 602,
+        "mmlVideo": false,
+        "round": {
+          "title": "Elite Eight&#174;",
+          "subtitle": "3/30-3/31",
+          "roundNumber": 5,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 3,
+          "position": "TR",
+          "title": "SOUTH",
+          "abbreviation": "S",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 64,
+            "color": "#002D72",
+            "ncaaOrgId": 193,
+            "seed": 4,
+            "seoname": "duke",
+            "nickname": "Blue Devils",
+            "nameShort": "Duke",
+            "name6Char": "DUKE",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 76,
+            "color": "#C8102E",
+            "ncaaOrgId": 490,
+            "seed": 11,
+            "seoname": "north-carolina-st",
+            "nickname": "Wolfpack",
+            "nameShort": "NC State",
+            "name6Char": "NC ST",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 504,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "03/31/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 602,
+        "mmlVideo": false,
+        "round": {
+          "title": "Elite Eight&#174;",
+          "subtitle": "3/30-3/31",
+          "roundNumber": 5,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 5,
+          "position": "BR",
+          "title": "MIDWEST",
+          "abbreviation": "MW",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40723",
+          "name": "CBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 72,
+            "color": "#010101",
+            "ncaaOrgId": 559,
+            "seed": 1,
+            "seoname": "purdue",
+            "nickname": "Boilermakers",
+            "nameShort": "Purdue",
+            "name6Char": "PUR",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 66,
+            "color": "#FF8200",
+            "ncaaOrgId": 694,
+            "seed": 2,
+            "seoname": "tennessee",
+            "nickname": "Volunteers",
+            "nameShort": "Tennessee",
+            "name6Char": "TENN",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 601,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "04/06/2024",
+        "victorGamePosition": "Top",
+        "victorBracketPositionId": 701,
+        "mmlVideo": false,
+        "round": {
+          "title": "FINAL FOUR&#174;",
+          "subtitle": "4/6",
+          "roundNumber": 6,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 6,
+          "position": "CC",
+          "title": "",
+          "abbreviation": "",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 86,
+            "color": "#0C2340",
+            "ncaaOrgId": 164,
+            "seed": 1,
+            "seoname": "uconn",
+            "nickname": "Huskies",
+            "nameShort": "UConn",
+            "name6Char": "UCONN",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 72,
+            "color": "#9D2235",
+            "ncaaOrgId": 8,
+            "seed": 4,
+            "seoname": "alabama",
+            "nickname": "Crimson Tide",
+            "nameShort": "Alabama",
+            "name6Char": "BAMA",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 602,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "04/06/2024",
+        "victorGamePosition": "Bottom",
+        "victorBracketPositionId": 701,
+        "mmlVideo": false,
+        "round": {
+          "title": "FINAL FOUR&#174;",
+          "subtitle": "4/6",
+          "roundNumber": 6,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 6,
+          "position": "CC",
+          "title": "",
+          "abbreviation": "",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": false,
+            "score": 50,
+            "color": "#C8102E",
+            "ncaaOrgId": 490,
+            "seed": 11,
+            "seoname": "north-carolina-st",
+            "nickname": "Wolfpack",
+            "nameShort": "NC State",
+            "name6Char": "NC ST",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": true,
+            "score": 63,
+            "color": "#010101",
+            "ncaaOrgId": 559,
+            "seed": 1,
+            "seoname": "purdue",
+            "nickname": "Boilermakers",
+            "nameShort": "Purdue",
+            "name6Char": "PUR",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      },
+      {
+        "bracketId": 701,
+        "gameStateCode": 4,
+        "gamestateDisplay": "",
+        "statusCodeDisplay": "final",
+        "startDate": "04/08/2024",
+        "victorGamePosition": null,
+        "victorBracketPositionId": null,
+        "mmlVideo": false,
+        "round": {
+          "title": "Championship",
+          "subtitle": "4/8",
+          "roundNumber": 7,
+          "__typename": "Round"
+        },
+        "region": {
+          "sectionId": 6,
+          "position": "CC",
+          "title": "",
+          "abbreviation": "",
+          "__typename": "RegionSection"
+        },
+        "broadcaster": {
+          "id": "40738",
+          "name": "TBS",
+          "__typename": "Broadcaster"
+        },
+        "teams": [
+          {
+            "isTop": true,
+            "isHome": true,
+            "score": 75,
+            "color": "#0C2340",
+            "ncaaOrgId": 164,
+            "seed": 1,
+            "seoname": "uconn",
+            "nickname": "Huskies",
+            "nameShort": "UConn",
+            "name6Char": "UCONN",
+            "isWinner": true,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          },
+          {
+            "isTop": false,
+            "isHome": false,
+            "score": 60,
+            "color": "#010101",
+            "ncaaOrgId": 559,
+            "seed": 1,
+            "seoname": "purdue",
+            "nickname": "Boilermakers",
+            "nameShort": "Purdue",
+            "name6Char": "PUR",
+            "isWinner": false,
+            "textOverride": null,
+            "__typename": "ChampionshipTeam"
+          }
+        ],
+        "__typename": "ChampionshipGame"
+      }
+    ]
+  }
+}
