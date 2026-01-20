@@ -1,0 +1,31 @@
+{
+  "name": "cherry-march-madness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "serve": "node ./dist/server.js",
+    "bracket": "node ./dist/bracket-create.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "node": "^22.14.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.3",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "axios": "^1.8.3",
+    "express": "^4.21.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

@@ -1,0 +1,5 @@
+test-data/*
+brackets
+dist
+node_modules
+package-lock.json
