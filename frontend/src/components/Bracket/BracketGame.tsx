@@ -2,20 +2,18 @@ import React from "react";
 import { Box } from "@mui/material";
 import BracketGameTeam from "./BracketGameTeam";
 
-interface BracketGameTeamPlaceholder {
-  actual?: MMLTeam;
-  picked?: MMLTeam;
-}
-
-interface BracketGameProps {
-  topTeam: BracketGameTeamPlaceholder;
-  bottomTeam: BracketGameTeamPlaceholder;
-  startTime: Date;
+export interface BracketGameProps {
+  mmlGameData: MMLContest;
+  topPickedTeamId?: number;
+  bottomPickedTeamId?: number;
   flipped?: boolean;
 }
 
 const BracketGame = (props: BracketGameProps) => {
-  const { topTeam, bottomTeam, flipped } = props;
+  const { mmlGameData, topPickedTeamId, bottomPickedTeamId, flipped } = props;
+
+  const actualTopTeam = mmlGameData.teams.find((team) => team.isTop);
+  const actualBottomTeam = mmlGameData.teams.find((team) => !team.isTop);
   return (
     <Box
       sx={{
@@ -31,14 +29,12 @@ const BracketGame = (props: BracketGameProps) => {
     >
       <BracketGameTeam
         position="top"
-        pickedTeam={topTeam.picked}
-        actualTeam={topTeam.actual}
+        actualTeam={actualTopTeam}
         flipped={flipped}
       />
       <BracketGameTeam
         position="bottom"
-        pickedTeam={bottomTeam.picked}
-        actualTeam={bottomTeam.actual}
+        actualTeam={actualBottomTeam}
         flipped={flipped}
       />
     </Box>

@@ -34,8 +34,8 @@ interface MMLContest {
   gameStateCode: number;
   gamestateDisplay: string;
   statusCodeDisplay: string;
-  victorGamePosition: string;
-  victorBracketPositionId: number;
+  victorGamePosition: string | null;
+  victorBracketPositionId: number | null;
   currentPeriod: string;
   contestClock: string;
   period: unknown | null;
@@ -50,18 +50,16 @@ interface MMLContest {
     name: string;
     __typename: string;
   };
-  excitementAlerts: [];
+  excitementAlerts: any[];
   location: {
     id: string;
     venue: string;
     __typename: string;
   };
-  mmlStreams: [
-    {
-      mediaId: string;
-      __typename: string;
-    },
-  ];
+  mmlStreams: {
+    mediaId: string;
+    __typename: string;
+  }[];
   round: MMLRound;
   teams: MMLTeam[];
   winnerOf: number[];
