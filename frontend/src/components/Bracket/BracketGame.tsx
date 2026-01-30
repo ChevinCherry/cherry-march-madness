@@ -4,13 +4,13 @@ import BracketGameTeam from "./BracketGameTeam";
 
 export interface BracketGameProps {
   mmlGameData: MMLContest;
-  topPickedTeamId?: number;
-  bottomPickedTeamId?: number;
+  topPickedTeam?: MMLTeam;
+  bottomPickedTeam?: MMLTeam;
   flipped?: boolean;
 }
 
 const BracketGame = (props: BracketGameProps) => {
-  const { mmlGameData, topPickedTeamId, bottomPickedTeamId, flipped } = props;
+  const { mmlGameData, topPickedTeam, flipped } = props;
 
   const actualTopTeam = mmlGameData.teams.find((team) => team.isTop);
   const actualBottomTeam = mmlGameData.teams.find((team) => !team.isTop);
