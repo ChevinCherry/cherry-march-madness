@@ -45,6 +45,7 @@ const BracketGameTeam = (props: BracketGameTeamProps) => {
               flex: 1,
               display: "flex",
               flexDirection: flipped ? "row-reverse" : "row",
+              justifyContent: "flex-end",
               gap: "0.5rem",
               alignItems: "center",
             }}

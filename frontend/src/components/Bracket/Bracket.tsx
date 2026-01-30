@@ -38,18 +38,18 @@ const Bracket = () => {
       }}
     >
       <CanvasController>
-        <Box sx={{ display: "grid", gridTemplateColumns: "repeat(11, 1fr)" }}>
+        <Box sx={{ display: "flex" }}>
           <BracketColumn games={round64Left} />
           <BracketColumn games={round32Left} />
           <BracketColumn games={sweet16Left} />
           <BracketColumn games={elite8Left} />
           <BracketColumn games={final4Left} />
-          <BracketColumn games={championship} />
-          <BracketColumn games={final4Right} />
-          <BracketColumn games={elite8Right} />
-          <BracketColumn games={sweet16Right} />
-          <BracketColumn games={round32Right} />
-          <BracketColumn games={round64Right} />
+          <BracketColumn games={championship} noProgression={true} />
+          <BracketColumn games={final4Right} flipped={true} />
+          <BracketColumn games={elite8Right} flipped={true} />
+          <BracketColumn games={sweet16Right} flipped={true} />
+          <BracketColumn games={round32Right} flipped={true} />
+          <BracketColumn games={round64Right} flipped={true} />
         </Box>
       </CanvasController>
     </Box>
