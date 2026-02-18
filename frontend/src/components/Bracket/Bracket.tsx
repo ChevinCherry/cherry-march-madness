@@ -1,17 +1,12 @@
 import React from "react";
 import { Box } from "@mui/material";
-import BracketGame from "./BracketGame";
-import { getMMLTestData, segmentArray } from "../../utilts";
-import BracketGameProgression from "./BracketGameProgression";
+import { segmentArray } from "../../utilts";
 import BracketColumn from "./BracketColumn";
 import CanvasController from "../CanvasController";
+import { useBracketContext } from "../../contexts/bracket";
 
 const Bracket = () => {
-  const mmlData = getMMLTestData();
-
-  const mmlGames = mmlData.data.mmlContests.sort(
-    (game1, game2) => game1.bracketId - game2.bracketId
-  );
+  const { games } = useBracketContext();
 
   const [
     first4,
@@ -26,7 +21,7 @@ const Bracket = () => {
     final4Left,
     final4Right,
     championship,
-  ] = segmentArray<MMLContest>(mmlGames, 4, 16, 16, 8, 8, 4, 4, 2, 2, 1, 1, 1);
+  ] = segmentArray(games, 4, 16, 16, 8, 8, 4, 4, 2, 2, 1, 1, 1);
 
   return (
     <Box
