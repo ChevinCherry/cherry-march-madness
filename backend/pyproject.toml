@@ -1,0 +1,5 @@
+[project]
+name = "cherry-march-madness-backend"
+description = "A really cool, non-trivial Python application"
+version = "1.0.0"
+dependencies = []
