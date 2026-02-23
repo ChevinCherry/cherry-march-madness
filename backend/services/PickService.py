@@ -1,14 +1,24 @@
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from db.models import Pick
+from backend.db.models import DBPick
+from backend.api.models import APIPick, APIPickCreate
 from uuid import UUID
 from utils import getDBTimestamp
 
-def getAllPoolPicks(session: Session, poolId: str) -> list[Pick]:
-    pickSelect = select(Pick).where(Pick.poolId == poolId)
-    return list(session.scalars(pickSelect).all())
+def getAllPoolPicks(session: Session, poolId: str) -> list[APIPick]:
+    pickSelect = select(DBPick).where(DBPick.poolId == poolId)
+    dbPickList = list(session.scalars(pickSelect).all())
+    return list(map(APIPick, dbPickList))
 
-def makePick(session: Session, userId: UUID, poolId: UUID, mmlContestId: int, mmlTeamId: int):
-    newPick = Pick(userId=userId, poolId=poolId, mmlContestId=mmlContestId, mmlTeamId=mmlTeamId, pickEpoch=getDBTimestamp())
-    session.add(newPick)
-    return newPick
+def makePick(session: Session, userId: UUID, poolId: UUID, pick: APIPickCreate, timestamp: int | None) -> APIPick:
+    dbPick = DBPick(userId=userId, poolId=poolId, mmlContestId=pick.mmlContestId, mmlTeamId=pick.mmlTeamId, current=True, pickEpoch=timestamp or getDBTimestamp())
+    session.add(dbPick)
+    return APIPick(dbPick)
+
+def makePicks(session: Session, userId: UUID, poolId: UUID, picks: list[APIPickCreate]) -> list[APIPick]: 
+    now = getDBTimestamp()
+    return list(map(lambda pick: makePick(session, userId, poolId, pick, now), picks))
+
+def deletePicks(session: Session, pickIds: list[UUID]):
+    for pickId in pickIds:
+        session.query(DBPick).filter(DBPick.id == pickId).update({"current": False}, synchronize_session=True)

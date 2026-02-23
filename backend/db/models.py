@@ -5,7 +5,7 @@ import uuid
 class Base(DeclarativeBase):
     pass
 
-class User(Base):
+class DBUser(Base):
     __tablename__ = "user"
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
@@ -13,7 +13,13 @@ class User(Base):
     password: Mapped[str] = deferred(mapped_column(String(255), nullable=False))
     displayName: Mapped[str] = mapped_column(String(15), nullable=False)
 
-class Pool(Base):
+class DBRefreshToken(Base):
+    __tablename__ = "refresh_token"
+
+    token: Mapped[str] = mapped_column(String(15), primary_key=True)
+    userId: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey("user.id"))
+
+class DBPool(Base):
     __tablename__ = "pool"
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
@@ -26,7 +32,7 @@ class Pool(Base):
     active: Mapped[bool] = mapped_column(Boolean, nullable=False)
     settings: Mapped[JSON] = mapped_column(JSON)
 
-class Pick(Base):
+class DBPick(Base):
     __tablename__ = "pick"
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
@@ -34,9 +40,10 @@ class Pick(Base):
     mmlContestId: Mapped[int] = mapped_column(Integer, nullable=False)
     userId: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey("user.id"), nullable=False)
     poolId: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey("pool.id"), nullable=False)
+    current: Mapped[bool] = mapped_column(Boolean, nullable=False)
     pickEpoch: Mapped[int] = mapped_column(Integer, nullable=False)
 
-class BracketSource(Base):
+class DBBracketSource(Base):
     __tablename__ = "bracket_source"
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
@@ -45,7 +52,7 @@ class BracketSource(Base):
     lastFetch: Mapped[JSON] = mapped_column(JSON, nullable=True)
     lastFetchEpoch: Mapped[int] = mapped_column(Integer, nullable=True)
 
-class Participant(Base):
+class DBParticipant(Base):
     __tablename__ = "participant"
     
     userId: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey("user.id"), primary_key=True)

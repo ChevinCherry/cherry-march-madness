@@ -2,42 +2,34 @@ import React, {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
   useState,
 } from "react";
+import { Pick, PoolData } from "../api/api-types";
+import { getPool, getActivePool } from "../api/api";
 import { useBracketContext } from "./bracket";
-import { Pick, User } from "../../../shared/api-types";
-
-interface APIPoolData {
-  id: string;
-  players: User[];
-  picks: Pick[];
-}
 
 export type PickMap = { [contestId: number]: Pick };
 
-export interface PoolData {
-  id: string;
-  playerPicks: { [playerId: string]: PickMap };
+export interface LoadedPool {
+  raw: PoolData;
+  participantPicks: { [playerId: string]: PickMap };
 }
 
 interface PoolContext {
-  loaded: PoolData | null;
-  myPicks: PickMap;
-  loadPool: (poolId: string) => void;
+  pool: LoadedPool | null;
+  loadPool: (poolId: string) => Promise<void>;
+  loadActivePool: () => Promise<void>;
+  reloadPool: () => Promise<void>;
   makePick: (contestId: number, teamId: number) => void;
-  revertMyPicks: () => void;
-  saveMyPicks: () => void;
 }
 
 const PoolContext = createContext<PoolContext>({
-  loaded: null,
-  myPicks: {},
-  loadPool: () => {},
+  pool: null,
+  loadPool: async () => {},
+  loadActivePool: async () => {},
+  reloadPool: async () => {},
   makePick: () => {},
-  revertMyPicks: () => {},
-  saveMyPicks: () => {},
 });
 
 interface PoolProviderProps {
@@ -45,18 +37,13 @@ interface PoolProviderProps {
 }
 
 export const PoolProvider = ({ children }: PoolProviderProps) => {
-  const [loadedAPIData, setLoadedAPIData] = useState<APIPoolData | null>(null);
-  const [myPicks, setMyPicks] = useState<PickMap>({});
+  const [loaded, setLoaded] = useState<PoolData | null>(null);
 
-  useEffect(() => {
-    setMyPicks({});
-  }, [loadedAPIData]);
-
-  const loaded = useMemo(() => {
-    if (!loadedAPIData) {
+  const participantPicks = useMemo(() => {
+    if (!loaded) {
       return null;
     }
-    const playerPicks = loadedAPIData.picks.reduce(
+    const participantPicks = loaded.picks.reduce(
       (acc, pick) => {
         const playerId = pick.playerId;
         const contestId = pick.contestId;
@@ -65,56 +52,63 @@ export const PoolProvider = ({ children }: PoolProviderProps) => {
         acc[playerId] = playerPickMap;
         return acc;
       },
-      {} as { [playerPick: string]: PickMap }
+      {} as { [userId: string]: PickMap }
     );
 
-    return { id: loadedAPIData.id, playerPicks };
-  }, [loadedAPIData]);
+    return participantPicks;
+  }, [loaded]);
 
-  const loadPool = useCallback((poolId: string) => {
-    setLoadedAPIData({ id: poolId, picks: [], players: [] });
+  const loadPool = useCallback(async (poolId: string) => {
+    setLoaded(await getPool(poolId));
   }, []);
+
+  const loadActivePool = useCallback(async () => {
+    setLoaded(await getActivePool());
+  }, []);
+
+  const reloadPool = useCallback(async () => {
+    if (loaded) {
+      setLoaded(await getPool(loaded.pool.id));
+    }
+  }, [loaded]);
 
   const { progression } = useBracketContext();
 
-  const makePick = useCallback(
-    (contestId: number, teamId: number | null) => {
-      if (myPicks[contestId]?.teamId === teamId) {
-        return;
-      }
-      const newPickMap = { ...myPicks };
-      if (teamId === null) {
-        delete newPickMap[contestId];
-      } else {
-        newPickMap[contestId];
-      }
-      let nextGame = progression[contestId] && progression[contestId].to;
-      while (nextGame !== undefined) {
-        delete newPickMap[nextGame.gameData.contestId];
-        nextGame = nextGame.to;
-      }
-      setMyPicks(newPickMap);
-    },
-    [myPicks, progression]
-  );
-
-  const revertPicks = useCallback(() => {
-    setMyPicks({});
-  }, [loaded]);
-
-  const savePicks = useCallback(() => {
-    console.log("SAVING", myPicks);
-  }, [myPicks]);
+  // const makePick = useCallback(
+  //   (contestId: number, teamId: number | null) => {
+  //     if (myPicks[contestId]?.teamId === teamId) {
+  //       return;
+  //     }
+  //     const newPickMap = { ...myPicks };
+  //     if (teamId === null) {
+  //       delete newPickMap[contestId];
+  //     } else {
+  //       newPickMap[contestId];
+  //     }
+  //     let nextGame = progression[contestId] && progression[contestId].to;
+  //     while (nextGame !== undefined) {
+  //       delete newPickMap[nextGame.gameData.contestId];
+  //       nextGame = nextGame.to;
+  //     }
+  //     setMyPicks(newPickMap);
+  //   },
+  //   [myPicks, progression]
+  // );
 
   return (
     <PoolContext.Provider
       value={{
-        loaded,
-        myPicks,
+        pool:
+          loaded && participantPicks
+            ? {
+                raw: loaded,
+                participantPicks,
+              }
+            : null,
+        reloadPool,
+        loadActivePool,
         loadPool,
-        makePick,
-        revertMyPicks: revertPicks,
-        saveMyPicks: savePicks,
+        makePick: () => {},
       }}
     >
       {children}
