@@ -1,8 +1,8 @@
 import uvicorn
 from fastapi import FastAPI, HTTPException, status, Body, Cookie, Response
-from backend.services import AuthService, PoolService, PickService, BracketService
-from backend.db.driver import DBDriver
-from backend.api.models import APICreateUserRequestBody, APILoginRequestBody, APIAccessToken, APIUpdatePicksRequestBody, APIPoolData
+from services import AuthService, PoolService, PickService, BracketService
+from db.driver import DBDriver
+from api.models import APICreateUserRequestBody, APILoginRequestBody, APIAccessToken, APIUpdatePicksRequestBody, APIPoolData
 from dotenv import load_dotenv
 import uuid
 

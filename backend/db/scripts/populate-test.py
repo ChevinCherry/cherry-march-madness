@@ -13,7 +13,7 @@ session.commit()
 
 now = getDBTimestamp()
 session.refresh(bracketSource)
-adminUser = DBUser(username="admin", password="password", displayName="ADMIN")
+adminUser = DBUser(username="admin", password="password", displayName="ADMIN", createdEpoch=now)
 session.add(adminUser)
 pool = DBPool(title="Test Pool", createdEpoch=now, startEpoch=now, endEpoch=now, bracketSourceId=bracketSource.id, settings={}, active=True)
 session.add(pool)

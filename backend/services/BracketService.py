@@ -1,7 +1,7 @@
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from backend.db.models import DBBracketSource
-from backend.api.models import APIBracketSource
+from db.models import DBBracketSource
+from api.models import APIBracketSource
 from utils import getDBTimestamp
 import requests
 import os

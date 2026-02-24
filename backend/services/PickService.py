@@ -1,7 +1,7 @@
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from backend.db.models import DBPick
-from backend.api.models import APIPick, APIPickCreate
+from db.models import DBPick
+from api.models import APIPick, APIPickCreate
 from uuid import UUID
 from utils import getDBTimestamp
 

@@ -1,8 +1,8 @@
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 from uuid import UUID
-from backend.db.models import DBUser, DBRefreshToken, DBUser
-from backend.api.models import APIUser
+from db.models import DBUser, DBRefreshToken, DBUser
+from api.models import APIUser
 from utils import getDBTimestamp
 from fastapi import Response
 import jwt

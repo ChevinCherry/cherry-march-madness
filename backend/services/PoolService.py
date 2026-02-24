@@ -1,7 +1,7 @@
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from backend.db.models import DBPool, DBParticipant
-from backend.api.models import APIPool, APIParticipant
+from db.models import DBPool, DBParticipant
+from api.models import APIPool, APIParticipant
 
 def getPoolData(session: Session, poolId: str) -> (APIPool | None):
     poolSelect = select(DBPool).where(DBPool.id == poolId)
