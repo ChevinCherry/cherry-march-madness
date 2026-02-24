@@ -5,14 +5,14 @@ import React, {
   useMemo,
   useState,
 } from "react";
-import { Pick, PoolData } from "../api/api-types";
+import { APIPick, APIPoolData } from "../api/api-types";
 import { getPool, getActivePool } from "../api/api";
 import { useBracketContext } from "./bracket";
 
-export type PickMap = { [contestId: number]: Pick };
+export type PickMap = { [contestId: number]: APIPick };
 
 export interface LoadedPool {
-  raw: PoolData;
+  raw: APIPoolData;
   participantPicks: { [playerId: string]: PickMap };
 }
 
@@ -37,7 +37,7 @@ interface PoolProviderProps {
 }
 
 export const PoolProvider = ({ children }: PoolProviderProps) => {
-  const [loaded, setLoaded] = useState<PoolData | null>(null);
+  const [loaded, setLoaded] = useState<APIPoolData | null>(null);
 
   const participantPicks = useMemo(() => {
     if (!loaded) {

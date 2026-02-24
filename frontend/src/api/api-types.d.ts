@@ -1,4 +1,11 @@
-export interface Pick {
+export interface APIUser {
+  id: string;
+  username: string;
+  displayName: string;
+  createdEpoch: number;
+}
+
+export interface APIPick {
   playerId: string;
   epoch: number;
   contestId: number;
@@ -6,7 +13,7 @@ export interface Pick {
   poolId: string;
 }
 
-export interface Pool {
+export interface APIPool {
   id: string;
   title: string;
   creatorId: string;
@@ -18,13 +25,24 @@ export interface Pool {
   settings: any;
 }
 
-export interface Participant {
+export interface APIParticipant {
   id: string;
   displayName: string;
 }
 
-export interface PoolData {
-  pool: Pool;
-  participants: Participant[];
-  picks: Pick[];
+export interface APIPoolData {
+  pool: APIPool;
+  participants: APIParticipant[];
+  picks: APIPick[];
+}
+
+export interface APICreateUserBody {
+  username: string;
+  password: string;
+  displayName: string;
+}
+
+export interface APILoginBody {
+  username: string;
+  password: string;
 }

@@ -8,16 +8,16 @@ def getPoolData(session: Session, poolId: str) -> (APIPool | None):
     pool = session.scalars(poolSelect).first()
     if (pool == None):
         return None
-    return APIPool(pool)
+    return APIPool.model_validate(pool, from_attributes=True)
 
 def getActivePoolData(session: Session) -> (APIPool | None):
     poolSelect = select(DBPool).where(DBPool.active == True)
     pool = session.scalars(poolSelect).first()
     if (pool == None):
         return None
-    return APIPool(pool)
+    return APIPool.model_validate(pool, from_attributes=True)
 
 def getPoolParticipants(session: Session, poolId: str) -> list[APIParticipant]:
     participantsSelect = select(DBParticipant).where(DBParticipant.poolId == poolId)
     participants = list(session.scalars(participantsSelect).all())
-    return list(map(APIParticipant, participants))
+    return list(map(lambda participant: APIParticipant.model_validate(participant, from_attributes=True), participants))

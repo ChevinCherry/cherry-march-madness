@@ -1,6 +1,6 @@
 import uvicorn
-from fastapi import FastAPI, HTTPException, status, Body, Cookie
-from services import AuthService, PoolService, PickService, BracketService
+from fastapi import FastAPI, HTTPException, status, Body, Cookie, Response
+from backend.services import AuthService, PoolService, PickService, BracketService
 from backend.db.driver import DBDriver
 from backend.api.models import APICreateUserRequestBody, APILoginRequestBody, APIAccessToken, APIUpdatePicksRequestBody, APIPoolData
 from dotenv import load_dotenv
@@ -15,28 +15,28 @@ async def helloWorld():
     return "Hello from the Cherry March Madness API!"
 
 @app.post("/createUser")
-async def createUser(body: APICreateUserRequestBody):
+async def createUser(body: APICreateUserRequestBody, response: Response):
     session = DBDriver.startSession()
     res = AuthService.createUser(session, username=body.username, password=body.password, displayName=body.displayName)
     session.commit()
     session.close()
     if (type(res) is str):
         raise HTTPException(HTTPException(status.HTTP_400_BAD_REQUEST), res)
-    tokens = AuthService.login(session, username=body.username, password=body.password)
-    if (tokens == None):
+    user = AuthService.login(session=session, response=response, username=body.username, password=body.password)
+    if (user == None):
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="User account was created, but failed to log in")
-    return tokens
+    return user
 
 
 @app.post("/login")
-async def login(body: APILoginRequestBody):
+async def login(body: APILoginRequestBody, response: Response):
     session = DBDriver.startSession()
-    tokens = AuthService.login(session, body.username, body.password)
+    user = AuthService.login(session=session, response=response, username=body.username, password=body.password)
     session.commit()
     session.close()
-    if (tokens == None):
+    if (user == None):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Username or Password is incorrect")
-    return tokens
+    return user
 
 @app.post("/refreshToken")
 async def refreshToken(refreshToken: uuid.UUID = Cookie()):

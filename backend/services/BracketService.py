@@ -20,4 +20,4 @@ def doBracketUpdate(session: Session, bracketSource: DBBracketSource) -> APIBrac
     bracketSource.lastFetchEpoch = getDBTimestamp()
     latestData = requests.get(bracketSource.fetchUrl).json()
     bracketSource.lastFetch = latestData
-    return APIBracketSource(bracketSource)
+    return APIBracketSource.model_validate(bracketSource, from_attributes=True)

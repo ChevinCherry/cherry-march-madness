@@ -17,7 +17,7 @@ class DBUser(Base):
 class DBRefreshToken(Base):
     __tablename__ = "refresh_token"
 
-    token: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True)
+    token: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     expiryEpoch: Mapped[int] = mapped_column(Integer, nullable=False)
     userId: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), ForeignKey("user.id"))
 

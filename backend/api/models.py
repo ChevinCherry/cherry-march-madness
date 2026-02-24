@@ -11,6 +11,12 @@ class APILoginRequestBody(BaseModel):
     username: str
     password: SecretStr
 
+class APIUser(BaseModel):
+    id: UUID
+    username: str
+    displayName: str
+    createdEpoch: int
+
 class APIAuthTokens(BaseModel):
     refreshToken: UUID
     accessToken: str
