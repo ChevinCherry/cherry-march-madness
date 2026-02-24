@@ -2,6 +2,7 @@ import React, {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -11,13 +12,17 @@ import {
   BracketProgressionNode,
   TeamMap,
 } from "../types/bracket";
-import { MMLContest } from "../../../shared/mml";
+import { MMLContest, MMLData } from "../types/mml";
+import { getBracketUpdate } from "../api/api";
 
 interface BracketContext {
-  games: MMLContest[];
+  bracketSourceId: string | null;
+  setBracketSourceId: (id: string) => void;
+  raw: MMLData | null;
+  lastFetchEpoch: number | null;
   teams: TeamMap;
   progression: BracketProgressionMap;
-  loadMMLBracket: (games: MMLContest[]) => void;
+  getLatestBracket: () => Promise<void>;
 }
 
 const createTeamMap = (games: MMLContest[]) => {
@@ -60,10 +65,13 @@ const createProgressionMap = (games: MMLContest[]): BracketProgressionMap => {
 };
 
 const BracketContext = createContext<BracketContext>({
-  games: [],
+  bracketSourceId: null,
+  setBracketSourceId: () => {},
+  raw: null,
+  lastFetchEpoch: null,
   teams: {},
   progression: {},
-  loadMMLBracket: () => {},
+  getLatestBracket: async () => {},
 });
 
 interface BracketProviderProps {
@@ -71,19 +79,43 @@ interface BracketProviderProps {
 }
 
 export const BracketProvider = ({ children }: BracketProviderProps) => {
-  const [games, setGames] = useState<MMLContest[]>([]);
+  const [bracketSourceId, setBracketSourceId] = useState<string | null>(null);
+  const [raw, setRaw] = useState<MMLData | null>(null);
+  const [lastFetchEpoch, setLastFetchEpoch] = useState<number | null>(null);
 
-  const progression = useMemo(() => createProgressionMap(games), [games]);
+  const games = raw?.data.mmlContests;
 
-  const teams = useMemo(() => createTeamMap(games), [games]);
+  const progression = useMemo(
+    () => (games ? createProgressionMap(games) : {}),
+    [games]
+  );
 
-  const loadMMLBracket = useCallback((games: MMLContest[]) => {
-    setGames(games);
-  }, []);
+  const teams = useMemo(() => (games ? createTeamMap(games) : {}), [games]);
+
+  const getLatestBracket = useCallback(async () => {
+    if (!bracketSourceId) {
+      return;
+    }
+    const update = await getBracketUpdate(bracketSourceId);
+    setRaw(update.lastFetch);
+    setLastFetchEpoch(update.lastFetchEpoch);
+  }, [bracketSourceId]);
+
+  useEffect(() => {
+    getLatestBracket();
+  }, [bracketSourceId]);
 
   return (
     <BracketContext.Provider
-      value={{ games, teams, progression, loadMMLBracket }}
+      value={{
+        bracketSourceId,
+        setBracketSourceId,
+        raw,
+        lastFetchEpoch,
+        teams,
+        progression,
+        getLatestBracket,
+      }}
     >
       {children}
     </BracketContext.Provider>

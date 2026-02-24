@@ -3,6 +3,7 @@ import {
   APICreateUserBody,
   APIUser,
   APILoginBody,
+  APIBracketSource,
 } from "./api-types";
 
 const apiRoot = "http://0.0.0.0:3000";
@@ -48,9 +49,12 @@ export const getPool = async (poolId: string) => {
 };
 
 export const getBracketUpdate = async (bracketSourceId: string) => {
-  return (
-    await fetch(`${apiRoot}/bracket/${bracketSourceId}`, { method: "POST" })
+  const bracketData = await (
+    await fetch(`${apiRoot}/bracket/${bracketSourceId}`, {
+      method: "POST",
+    })
   ).json();
+  return bracketData as APIBracketSource;
 };
 
 export const makePick = async (

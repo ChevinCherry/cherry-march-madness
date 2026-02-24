@@ -1,3 +1,5 @@
+import { MMLData } from "../types/mml";
+
 export interface APIUser {
   id: string;
   username: string;
@@ -45,4 +47,12 @@ export interface APICreateUserBody {
 export interface APILoginBody {
   username: string;
   password: string;
+}
+
+export interface APIBracketSource {
+  id: string;
+  name: string;
+  fetchUrl: string;
+  lastFetch: MMLData;
+  lastFetchEpoch: number;
 }

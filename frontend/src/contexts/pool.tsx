@@ -117,6 +117,6 @@ export const PoolProvider = ({ children }: PoolProviderProps) => {
 };
 
 // 3. Create a custom hook for easy consumption
-export const usePickContext = () => {
+export const usePoolContext = () => {
   return useContext(PoolContext);
 };

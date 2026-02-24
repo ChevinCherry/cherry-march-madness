@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useBracketContext } from "./contexts/bracket";
-import { usePickContext } from "./contexts/pool";
+import { usePoolContext } from "./contexts/pool";
 import { getMMLTestData } from "./utilts";
 
 export interface InitAppDataLoaderProps {
@@ -8,12 +8,17 @@ export interface InitAppDataLoaderProps {
 }
 
 const InitAppDataLoader = ({ children }: InitAppDataLoaderProps) => {
-  const { loadMMLBracket } = useBracketContext();
-  const { loadPool: loadPicks } = usePickContext();
+  const { pool, loadActivePool } = usePoolContext();
+  const { setBracketSourceId } = useBracketContext();
   useEffect(() => {
-    loadMMLBracket(getMMLTestData().data.mmlContests);
-    loadPicks("");
+    loadActivePool();
   }, []);
+
+  useEffect(() => {
+    if (pool) {
+      setBracketSourceId(pool.raw.pool.bracketSourceId);
+    }
+  }, [pool]);
   return children;
 };
 

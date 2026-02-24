@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import BracketGameTeam from "./BracketGameTeam";
-import { MMLContest, MMLTeam } from "../../../../shared/mml";
+import { MMLContest, MMLTeam } from "../../types/mml";
 import { useBracketContext } from "../../contexts/bracket";
 
 export interface BracketGameProps {
