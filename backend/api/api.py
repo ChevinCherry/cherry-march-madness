@@ -1,5 +1,6 @@
 import uvicorn
 from fastapi import FastAPI, HTTPException, status, Body, Cookie, Response
+from fastapi.middleware.cors import CORSMiddleware
 from services import AuthService, PoolService, PickService, BracketService
 from db.driver import DBDriver
 from api.models import APICreateUserRequestBody, APILoginRequestBody, APIAccessToken, APIUpdatePicksRequestBody, APIPoolData
@@ -9,6 +10,14 @@ import uuid
 load_dotenv()
 
 app = FastAPI(title="CherryMMApi", version="1.0.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://0.0.0.0:5173", "http://localhost:5173","http://127.0.0.1:5173",],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 async def helloWorld():
@@ -73,6 +82,8 @@ async def getBracketUpdate(bracketSourceId: uuid.UUID):
     bracketData = BracketService.doBracketUpdate(session, bracketSourceId)
     session.commit()
     session.close()
+    if bracketData == None:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Bracket source with that ID does not exist")
     return bracketData
 
 @app.post("/updatePicks")

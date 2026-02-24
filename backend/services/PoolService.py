@@ -15,6 +15,7 @@ def getActivePoolData(session: Session) -> (APIPool | None):
     pool = session.scalars(poolSelect).first()
     if (pool == None):
         return None
+    print(pool)
     return APIPool.model_validate(pool, from_attributes=True)
 
 def getPoolParticipants(session: Session, poolId: str) -> list[APIParticipant]:

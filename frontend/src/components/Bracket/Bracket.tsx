@@ -6,7 +6,10 @@ import CanvasController from "../CanvasController";
 import { useBracketContext } from "../../contexts/bracket";
 
 const Bracket = () => {
-  const { games } = useBracketContext();
+  const { raw } = useBracketContext();
+  if (!raw) {
+    return <Box></Box>;
+  }
 
   const [
     first4,
@@ -21,7 +24,7 @@ const Bracket = () => {
     final4Left,
     final4Right,
     championship,
-  ] = segmentArray(games, 4, 16, 16, 8, 8, 4, 4, 2, 2, 1, 1, 1);
+  ] = segmentArray(raw.data.mmlContests, 4, 16, 16, 8, 8, 4, 4, 2, 2, 1, 1, 1);
 
   return (
     <Box

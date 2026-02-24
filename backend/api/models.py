@@ -38,7 +38,7 @@ class APIPick(APIPickCreate):
 class APIPool(BaseModel):
     id: UUID
     title: str
-    creatorId: UUID
+    creatorId: UUID | None
     bracketSourceId: UUID
     createdEpoch: int
     startEpoch: int
