@@ -1,8 +1,8 @@
 import uvicorn
-from fastapi import FastAPI
-from services import PoolService, PickService, BracketService
+from fastapi import FastAPI, HTTPException, status, Body, Cookie
+from services import AuthService, PoolService, PickService, BracketService
 from backend.db.driver import DBDriver
-from backend.api.models import APIUpdatePicksRequestBody, APIPoolData, APIPool, APIPick
+from backend.api.models import APICreateUserRequestBody, APILoginRequestBody, APIAccessToken, APIUpdatePicksRequestBody, APIPoolData
 from dotenv import load_dotenv
 import uuid
 
@@ -13,6 +13,40 @@ app = FastAPI(title="CherryMMApi", version="1.0.0")
 @app.get("/")
 async def helloWorld():
     return "Hello from the Cherry March Madness API!"
+
+@app.post("/createUser")
+async def createUser(body: APICreateUserRequestBody):
+    session = DBDriver.startSession()
+    res = AuthService.createUser(session, username=body.username, password=body.password, displayName=body.displayName)
+    session.commit()
+    session.close()
+    if (type(res) is str):
+        raise HTTPException(HTTPException(status.HTTP_400_BAD_REQUEST), res)
+    tokens = AuthService.login(session, username=body.username, password=body.password)
+    if (tokens == None):
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="User account was created, but failed to log in")
+    return tokens
+
+
+@app.post("/login")
+async def login(body: APILoginRequestBody):
+    session = DBDriver.startSession()
+    tokens = AuthService.login(session, body.username, body.password)
+    session.commit()
+    session.close()
+    if (tokens == None):
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Username or Password is incorrect")
+    return tokens
+
+@app.post("/refreshToken")
+async def refreshToken(refreshToken: uuid.UUID = Cookie()):
+    session = DBDriver.startSession()
+    accessToken = AuthService.refresh(session, refreshToken)
+    session.commit()
+    session.close()
+    if accessToken == None:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid Refresh Token")
+    return APIAccessToken(accessToken)
 
 @app.get("/activePool")
 async def getActivePool():
@@ -42,7 +76,10 @@ async def getBracketUpdate(bracketSourceId: uuid.UUID):
     return bracketData
 
 @app.post("/updatePicks")
-async def updatePicks(body: APIUpdatePicksRequestBody):
+async def updatePicks(body: APIUpdatePicksRequestBody = Body(), accessToken: uuid.UUID = Cookie(None)):
+    authed = AuthService.validateAccessToken(accessToken, expectedOwnerUserId=body.userId)
+    if (authed == False):
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid Access Token")
     session = DBDriver.startSession()
     newPicks = PickService.makePicks(session=session, userId=body.userId, poolId=body.poolId, picks=body.newPicks)
     PickService.deletePicks(session, pickIds=body.deletePicks)

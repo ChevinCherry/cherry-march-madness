@@ -1,6 +1,22 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, SecretStr
 from uuid import UUID
 from typing import Any
+
+class APICreateUserRequestBody(BaseModel):
+    username: str
+    password: SecretStr
+    displayName: str
+
+class APILoginRequestBody(BaseModel):
+    username: str
+    password: SecretStr
+
+class APIAuthTokens(BaseModel):
+    refreshToken: UUID
+    accessToken: str
+
+class APIAccessToken(BaseModel):
+    accessToken: str
 
 class APIPickCreate(BaseModel):
     mmlTeamId: int
