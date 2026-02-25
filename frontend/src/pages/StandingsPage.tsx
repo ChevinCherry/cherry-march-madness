@@ -3,7 +3,6 @@ import { Box, Typography } from "@mui/material";
 import SimpleTable, {
   SimpleTableColumnFormat,
 } from "../components/SimpleTable/SimpleTable";
-import SimpleTableHeader from "../components/SimpleTable/SimpleTableHeader";
 
 interface DummyItem {
   place: number;

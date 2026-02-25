@@ -1,46 +1,35 @@
+from pydantic import SecretStr
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 from uuid import UUID
 from db.models import DBUser, DBRefreshToken, DBUser
 from api.models import APIUser
 from utils import getDBTimestamp
-from fastapi import Response
+from fastapi import Response, HTTPException, status, Cookie
+from typing import Any
 import jwt
 import os
 
-def createUser(session: Session, username: str, password: str, displayName:str) -> DBUser | str:
-    selectExistingUserName = select(DBUser).where(DBUser.username == username)
-    existingUser = session.scalars(selectExistingUserName).first()
-    if (existingUser != None):
-        return "Username is taken."
-    user = DBUser(username=username, password=password, displayName=displayName)
-    session.add(user)
-    return user
-
-def login(session: Session, response: Response, username: str, password: str) -> APIUser | None:
-    userSelect = select(DBUser).where(DBUser.username == username and DBUser.password == password)
-    user = session.scalars(userSelect).first()
-    if (user == None):
-        return False
-    accessTokenLifetime = os.getenv('JWT_LIFETIME_MS')
-    if accessTokenLifetime == None:
-        raise "Missing JWT_LIFETIME_MS in env"
+def generateRefreshToken(session: Session, userId: UUID) -> UUID:
     refreshTokenLifetime = os.getenv('REFRESH_TOKEN_LIFETIME_MS')
     if refreshTokenLifetime == None:
-        raise "Missing REFRESH_TOKEN_LIFETIME_MS in env"
-    refreshToken = generateRefreshToken(session, user.id, int(refreshTokenLifetime))
-    accessToken = generateAuthJWT(user.id, int(accessTokenLifetime))
-    response.set_cookie(key="refreshToken", value=refreshToken, max_age=int(refreshTokenLifetime), httponly=True, samesite="lax")
-    response.set_cookie(key="accessToken", value=accessToken, max_age=int(accessTokenLifetime), httponly=True, samesite="lax")
-    return APIUser.model_validate(user, from_attributes=True)
-    
-def generateAuthJWT(userId: UUID, lifetime: int):
+        raise "Missing JWT_LIFETIME_MS in env"
+    newToken = DBRefreshToken(userId=userId, expiryEpoch=getDBTimestamp()+int(refreshTokenLifetime))
+    session.add(newToken)
+    session.commit()
+    session.refresh(newToken)
+    return newToken.token
+
+def generateAuthJWT(userId: UUID):
     secret = os.getenv('JWT_SECRET')
     if (secret == None):
         raise "Missing JWT_SECRET in env"
+    accessTokenLifetime = os.getenv('JWT_LIFETIME_MS')
+    if accessTokenLifetime == None:
+        raise "Missing JWT_LIFETIME_MS in env"
     payload = {
-        "userId": userId,
-        "exp": getDBTimestamp() + lifetime
+        "userId": str(userId),
+        "exp": getDBTimestamp() + int(accessTokenLifetime)
     }
     return jwt.encode(payload, secret, "HS256")
 
@@ -50,17 +39,39 @@ def decodeJWT(token: str):
         raise "Missing JWT_SECRET in env"
     return jwt.decode(token, secret, algorithms=["HS256"])
 
-def generateRefreshToken(session: Session, userId: UUID, lifetimeMS: int) -> UUID:
-    newToken = DBRefreshToken(userId=userId, expiryEpoch=getDBTimestamp()+lifetimeMS)
-    session.add(newToken)
-    session.commit()
-    session.refresh(newToken)
-    return newToken.token
-    
-def refresh(session: Session, refreshToken: UUID) -> str | None:
-    tokenLifetime = os.getenv('JWT_LIFETIME_MS')
-    if tokenLifetime == None:
+def setRefreshTokenCookie(response: Response, refreshToken: UUID):
+    refreshTokenLifetime = os.getenv('REFRESH_TOKEN_LIFETIME_MS')
+    if refreshTokenLifetime == None:
+        raise "Missing REFRESH_TOKEN_LIFETIME_MS in env"
+    response.set_cookie(key="refreshToken", value=refreshToken, max_age=int(refreshTokenLifetime), httponly=True, samesite="lax")
+
+def setAccessTokenCookie(response: Response, accessToken: str):
+    accessTokenLifetime = os.getenv('JWT_LIFETIME_MS')
+    if accessTokenLifetime == None:
         raise "Missing JWT_LIFETIME_MS in env"
+    response.set_cookie(key="accessToken", value=accessToken, max_age=int(accessTokenLifetime), httponly=True, samesite="lax")
+
+def createUser(session: Session, username: str, password: SecretStr, displayName:str) -> DBUser | str:
+    selectExistingUserName = select(DBUser).where(DBUser.username == username)
+    existingUser = session.scalars(selectExistingUserName).first()
+    if (existingUser != None):
+        return "Username is taken."
+    user = DBUser(username=username, password=password.get_secret_value(), displayName=displayName, createdEpoch=getDBTimestamp())
+    session.add(user)
+    return user
+
+def login(session: Session, response: Response, username: str, password: str) -> APIUser | None:
+    userSelect = select(DBUser).where(DBUser.username == username and DBUser.password == password)
+    user = session.scalars(userSelect).first()
+    if (user == None):
+        return False
+    refreshToken = generateRefreshToken(session, user.id)
+    accessToken = generateAuthJWT(user.id)
+    setRefreshTokenCookie(response, refreshToken)
+    setAccessTokenCookie(response, accessToken)
+    return APIUser.model_validate(user, from_attributes=True)
+    
+def refreshAccessToken(session: Session, response: Response, refreshToken: UUID) -> str | None:
     refreshTokenSelect = select(DBRefreshToken).where(DBRefreshToken.token == refreshToken)
     dbRefreshToken = session.scalars(refreshTokenSelect).first()
     if (dbRefreshToken == None):
@@ -69,15 +80,33 @@ def refresh(session: Session, refreshToken: UUID) -> str | None:
     if (dbRefreshToken.expiryEpoch > now):
         session.delete(dbRefreshToken)
         return None
-    return generateAuthJWT(dbRefreshToken.userId, int(tokenLifetime))
+    accessToken = generateAuthJWT(dbRefreshToken.userId)
+    setAccessTokenCookie(response, accessToken)
 
-def validateAccessToken(token: str | None, expectedOwnerUserId: UUID | None) -> bool:
-    if (token == None):
-        return False
-    tokenPayload =  decodeJWT(token)
-    expiryEpoch = tokenPayload['exp']
-    if type(expiryEpoch) == "int" and expiryEpoch > getDBTimestamp():
-        return False
-    if expectedOwnerUserId != None & expectedOwnerUserId != UUID(tokenPayload['userId']):
-        return False
-    return True
+def validateAccessToken(accessToken: str | None):
+    if (accessToken == None):
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing Access Token")
+    tokenData =  decodeJWT(accessToken)
+    expiryEpoch = tokenData['exp']
+    if type(expiryEpoch) != "int" or expiryEpoch > getDBTimestamp():
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Expired Access Token")
+    return tokenData
+
+def accessTokenBelongsTo(tokenData: dict[str, Any], userId: UUID):
+    tokenUserId = tokenData['userId']
+    if type(tokenUserId) != str:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN)
+    tokenUserId = UUID(tokenUserId)
+    if tokenUserId != userId:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN)
+    
+def getAccessTokenUser(session: Session, tokenData: dict[str, Any]) -> APIUser | None:
+    tokenUserId = tokenData['userId']
+    if type(tokenUserId) != str:
+        return None
+    userId = UUID(userId)
+    userSelect = select(DBUser).where(DBUser.id == userId)
+    dbUser = session.scalars(userSelect).first()
+    if (dbUser == None):
+        return None
+    return APIUser.model_validate(dbUser, from_attributes=True)

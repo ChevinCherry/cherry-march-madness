@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import BracketGame from "./BracketGame";
 import BracketGameProgression from "./BracketGameProgression";
+import { MMLContest } from "../../types/mml";
 
 interface BracketColumnProps {
   games: MMLContest[];
@@ -28,7 +29,6 @@ const BracketColumn = (props: BracketColumnProps) => {
       }}
     >
       {games.map((game, index) => {
-        console.log(game.bracketId, flipped);
         const elemArray = [
           <BracketGame
             key={`game-${game.bracketId}`}

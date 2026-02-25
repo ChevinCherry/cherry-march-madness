@@ -1,5 +1,5 @@
 import uvicorn
-from fastapi import FastAPI, HTTPException, status, Body, Cookie, Response
+from fastapi import FastAPI, HTTPException, status, Body, Cookie, Response, APIRouter, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from services import AuthService, PoolService, PickService, BracketService
 from db.driver import DBDriver
@@ -30,7 +30,7 @@ async def createUser(body: APICreateUserRequestBody, response: Response):
     session.commit()
     session.close()
     if (type(res) is str):
-        raise HTTPException(HTTPException(status.HTTP_400_BAD_REQUEST), res)
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=res)
     user = AuthService.login(session=session, response=response, username=body.username, password=body.password)
     if (user == None):
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="User account was created, but failed to log in")
@@ -47,18 +47,29 @@ async def login(body: APILoginRequestBody, response: Response):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Username or Password is incorrect")
     return user
 
-@app.post("/refreshToken")
-async def refreshToken(refreshToken: uuid.UUID = Cookie()):
+@app.post("/refreshAccessToken")
+async def refreshAccessToken(response: Response, refreshToken: uuid.UUID = Cookie(None)):
     session = DBDriver.startSession()
-    accessToken = AuthService.refresh(session, refreshToken)
+    accessToken = AuthService.refreshAccessToken(session=session, response=response, refreshToken=refreshToken)
     session.commit()
     session.close()
     if accessToken == None:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid Refresh Token")
     return APIAccessToken(accessToken)
 
+@app.get("/checkAuth")
+async def checkAuth(accessToken: str = Cookie(None)):
+    tokenData = AuthService.validateAccessToken(token=accessToken)
+    session = DBDriver.startSession()
+    user = AuthService.getAccessTokenUser(session=session, tokenData=tokenData)
+    session.close()
+    if user == None:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST)
+    return user
+
 @app.get("/activePool")
-async def getActivePool():
+async def getActivePool(accessToken: str = Cookie(None)):
+    AuthService.validateAccessToken(accessToken)
     session = DBDriver.startSession()
     pool = PoolService.getActivePoolData(session)
     participants = PoolService.getPoolParticipants(session, pool.id)
@@ -67,7 +78,8 @@ async def getActivePool():
     return APIPoolData(pool=pool, participants=participants, picks=picks)
 
 @app.get("/pool/{poolId}")
-async def getPoolData(poolId: uuid.UUID):
+async def getPoolData(poolId: uuid.UUID, accessToken: str = Cookie(None)):
+    AuthService.validateAccessToken(accessToken)
     session = DBDriver.startSession()
     pool = PoolService.getPoolData(session, poolId)
     participants = PoolService.getPoolParticipants(session, participants)
@@ -76,9 +88,8 @@ async def getPoolData(poolId: uuid.UUID):
     return APIPoolData(pool=pool, participants=participants, picks=picks)
 
 @app.post("/bracket/{bracketSourceId}")
-async def getBracketUpdate(bracketSourceId: uuid.UUID):
-    print(bracketSourceId)
-    session = DBDriver.startSession()
+async def getBracketUpdate(bracketSourceId: uuid.UUID, accessToken: str = Cookie(None)):
+    session = DBDriver.startSession(accessToken)
     bracketData = BracketService.doBracketUpdate(session, bracketSourceId)
     session.commit()
     session.close()
@@ -88,9 +99,8 @@ async def getBracketUpdate(bracketSourceId: uuid.UUID):
 
 @app.post("/updatePicks")
 async def updatePicks(body: APIUpdatePicksRequestBody = Body(), accessToken: uuid.UUID = Cookie(None)):
-    authed = AuthService.validateAccessToken(accessToken, expectedOwnerUserId=body.userId)
-    if (authed == False):
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid Access Token")
+    tokenData = AuthService.validateAccessToken(accessToken)
+    AuthService.accessTokenBelongsTo(tokenData=tokenData, userId=body.userId)
     session = DBDriver.startSession()
     newPicks = PickService.makePicks(session=session, userId=body.userId, poolId=body.poolId, picks=body.newPicks)
     PickService.deletePicks(session, pickIds=body.deletePicks)
@@ -99,4 +109,4 @@ async def updatePicks(body: APIUpdatePicksRequestBody = Body(), accessToken: uui
     return newPicks
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=3000)
+    uvicorn.run(app, host="localhost", port=3000)

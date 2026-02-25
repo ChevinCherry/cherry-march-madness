@@ -27,7 +27,10 @@ const SimpleTableHeader = <T extends string, U extends Record<string, any>>(
       }}
     >
       {format.map((column) => (
-        <Box sx={{ padding: "1rem", boxSizing: "border-box" }}>
+        <Box
+          key={`header-${column.id}`}
+          sx={{ padding: "1rem", boxSizing: "border-box" }}
+        >
           {column.header}
         </Box>
       ))}

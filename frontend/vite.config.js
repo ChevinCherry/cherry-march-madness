@@ -9,7 +9,7 @@ export default defineConfig({
     setupFiles: ["./src/setupTests.js"],
   },
   server: {
-    host: "0.0.0.0",
+    host: "localhost",
     port: 5173
   }
 });

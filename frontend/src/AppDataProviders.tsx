@@ -1,6 +1,7 @@
 import React from "react";
 import { BracketProvider } from "./contexts/bracket";
 import { PoolProvider } from "./contexts/pool";
+import { AuthProvider } from "./contexts/auth";
 
 export interface AppDataProvidersProps {
   children?: React.ReactNode;
@@ -8,9 +9,11 @@ export interface AppDataProvidersProps {
 
 const AppDataProviders = ({ children }: AppDataProvidersProps) => {
   return (
-    <BracketProvider>
-      <PoolProvider>{children}</PoolProvider>
-    </BracketProvider>
+    <AuthProvider>
+      <BracketProvider>
+        <PoolProvider>{children}</PoolProvider>
+      </BracketProvider>
+    </AuthProvider>
   );
 };
 

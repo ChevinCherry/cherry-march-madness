@@ -17,6 +17,7 @@ const SimpleTableItem = <T extends string, U extends Record<T, any>>(
     <Box sx={{ display: "grid", gridTemplateColumns }}>
       {format.map((column) => (
         <Box
+          key={column.id}
           sx={{
             boxSizing: "border-box",
             display: "flex",

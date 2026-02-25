@@ -13,7 +13,7 @@ import {
   TeamMap,
 } from "../types/bracket";
 import { MMLContest, MMLData } from "../types/mml";
-import { getBracketUpdate } from "../api/api";
+import { API } from "../api/api";
 
 interface BracketContext {
   bracketSourceId: string | null;
@@ -96,7 +96,7 @@ export const BracketProvider = ({ children }: BracketProviderProps) => {
     if (!bracketSourceId) {
       return;
     }
-    const update = await getBracketUpdate(bracketSourceId);
+    const update = await API.getBracketUpdate(bracketSourceId);
     setRaw(update.lastFetch);
     setLastFetchEpoch(update.lastFetchEpoch);
   }, [bracketSourceId]);

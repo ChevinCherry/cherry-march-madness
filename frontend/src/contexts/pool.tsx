@@ -6,7 +6,7 @@ import React, {
   useState,
 } from "react";
 import { APIPick, APIPoolData } from "../api/api-types";
-import { getPool, getActivePool } from "../api/api";
+import { API } from "../api/api";
 import { useBracketContext } from "./bracket";
 
 export type PickMap = { [contestId: number]: APIPick };
@@ -59,16 +59,16 @@ export const PoolProvider = ({ children }: PoolProviderProps) => {
   }, [loaded]);
 
   const loadPool = useCallback(async (poolId: string) => {
-    setLoaded(await getPool(poolId));
+    setLoaded(await API.getPool(poolId));
   }, []);
 
   const loadActivePool = useCallback(async () => {
-    setLoaded(await getActivePool());
+    setLoaded(await API.getActivePool());
   }, []);
 
   const reloadPool = useCallback(async () => {
     if (loaded) {
-      setLoaded(await getPool(loaded.pool.id));
+      setLoaded(await API.getPool(loaded.pool.id));
     }
   }, [loaded]);
 

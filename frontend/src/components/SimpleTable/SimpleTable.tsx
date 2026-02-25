@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, SxProps } from "@mui/material";
+import { Box } from "@mui/material";
 import SimpleTableHeader from "./SimpleTableHeader";
 import SimpleTableItem from "./SimpleTableItem";
 
@@ -46,6 +46,11 @@ const SimpleTable = <T extends string, U extends Record<T, any>>(
       >
         {items.map((item, index) => (
           <SimpleTableItem
+            key={
+              "key" in item && typeof item.key === "string"
+                ? item.key
+                : undefined
+            }
             format={format}
             item={item}
             lastItem={index === items.length - 1}

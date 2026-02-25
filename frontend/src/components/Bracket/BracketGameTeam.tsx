@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { getNCAATeamLogoURL } from "../../utilts";
+import { MMLTeam } from "../../types/mml";
 
 export interface BracketGameTeamProps {
   position: "top" | "bottom";
