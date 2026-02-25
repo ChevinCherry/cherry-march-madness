@@ -1,5 +1,6 @@
 import {
   Box,
+  IconButton,
   ToggleButton,
   ToggleButtonGroup,
   Typography,
@@ -8,6 +9,7 @@ import React from "react";
 import { View } from "../types/types";
 import Logo from "./Logo";
 import ProfileIcon from "./ProfileIcon";
+import { useAuthContext } from "../contexts/auth";
 
 interface SelectorProps {
   selectedView: View;
@@ -16,6 +18,8 @@ interface SelectorProps {
 
 const Navbar = (props: SelectorProps) => {
   const { selectedView, setSelectedView } = props;
+
+  const { logout } = useAuthContext();
 
   return (
     <Box
@@ -78,7 +82,9 @@ const Navbar = (props: SelectorProps) => {
           justifyContent: "flex-end",
         }}
       >
-        <ProfileIcon />
+        <IconButton onClick={logout}>
+          <ProfileIcon />
+        </IconButton>
       </Box>
     </Box>
   );

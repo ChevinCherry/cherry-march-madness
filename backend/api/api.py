@@ -43,9 +43,16 @@ async def login(body: APILoginRequestBody, response: Response):
     user = AuthService.login(session=session, response=response, username=body.username, password=body.password)
     session.commit()
     session.close()
-    if (user == None):
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Username or Password is incorrect")
     return user
+
+@app.post("/logout")
+async def logout(response: Response, accessToken: str | None = Cookie(None)):
+    tokenData = AuthService.validateAccessToken(accessToken)
+    userId = AuthService.getAccessTokenUserId(tokenData)
+    session = DBDriver.startSession()
+    AuthService.logout(session, response, userId)
+    session.commit()
+    session.close()
 
 @app.post("/refreshAccessToken")
 async def refreshAccessToken(response: Response, refreshToken: uuid.UUID = Cookie(None)):
@@ -54,17 +61,18 @@ async def refreshAccessToken(response: Response, refreshToken: uuid.UUID = Cooki
     session.commit()
     session.close()
     if accessToken == None:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid Refresh Token")
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)
     return APIAccessToken(accessToken)
 
 @app.get("/checkAuth")
 async def checkAuth(accessToken: str = Cookie(None)):
     tokenData = AuthService.validateAccessToken(accessToken)
+    userId = AuthService.getAccessTokenUserId(tokenData)
     session = DBDriver.startSession()
-    user = AuthService.getAccessTokenUser(session=session, tokenData=tokenData)
+    user = AuthService.getUserById(session, userId)
     session.close()
     if user == None:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST)
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)
     return user
 
 @app.get("/activePool")

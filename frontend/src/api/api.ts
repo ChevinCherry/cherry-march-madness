@@ -8,6 +8,8 @@ import {
 
 export class AuthExpiredError extends Error {}
 
+export class AuthFailedError extends Error {}
+
 export class API {
   private static root = "http://localhost:3000";
 
@@ -30,7 +32,13 @@ export class API {
     return response;
   }
 
-  // NO AUTH REQUIRED FUNCTIONS
+  static async refreshAccessToken() {
+    await fetch(`${API.root}/refreshAccessToken`, {
+      method: "POST",
+      credentials: "include",
+    });
+  }
+
   static async ping() {
     return (await fetch(`${API.root}/`, { method: "GET" })).text();
   }
@@ -48,25 +56,26 @@ export class API {
   }
 
   static async login(params: APILoginBody) {
-    const user = await (
-      await fetch(`${API.root}/login`, {
-        method: "POST",
-        credentials: "include",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(params),
-      })
-    ).json();
-    return user as APIUser;
+    const res = await fetch(`${API.root}/login`, {
+      method: "POST",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(params),
+    });
+    if (res.status === 400) {
+      throw new AuthFailedError();
+    } else if (res.status !== 200) {
+      throw new Error("Unexpected Auth Error");
+    }
+    return (await res.json()) as APIUser;
   }
 
-  static async refreshAccessToken() {
-    await fetch(`${API.root}/refreshAccessToken`, {
+  static async logout() {
+    await API.authedFetch(`${API.root}/logout`, {
       method: "POST",
       credentials: "include",
     });
   }
-
-  // AUTH REQUIRED FUNCTIONS
 
   static async checkAuth() {
     const res = await await API.authedFetch(`${API.root}/checkAuth`, {

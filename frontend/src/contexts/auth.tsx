@@ -43,22 +43,20 @@ export const AuthProvider = ({ children }: BracketProviderProps) => {
     async (username: string, password: string, displayName: string) => {
       setUser(await API.createUser({ username, password, displayName }));
     },
-    [setUser]
+    []
   );
 
-  const login = useCallback(
-    async (username: string, password: string) => {
-      setUser(await API.login({ username, password }));
-    },
-    [setUser]
-  );
+  const login = useCallback(async (username: string, password: string) => {
+    setUser(await API.login({ username, password }));
+  }, []);
 
   const logout = useCallback(async () => {
+    await API.logout();
     setUser(null);
-  }, [setUser]);
+  }, []);
 
   API.onAuthExpired = useCallback(async () => {
-    logout();
+    setUser(null);
   }, [logout]);
 
   const checkAuth = useCallback(async () => {

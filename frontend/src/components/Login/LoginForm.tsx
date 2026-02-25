@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
+import { useAuthContext } from "../../contexts/auth";
 
 interface LoginFormProps {
   onCreateAccount: () => void;
@@ -7,6 +8,7 @@ interface LoginFormProps {
 
 const LoginForm = (props: LoginFormProps) => {
   const { onCreateAccount } = props;
+  const { login } = useAuthContext();
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   return (
@@ -31,7 +33,9 @@ const LoginForm = (props: LoginFormProps) => {
         onChange={(e) => setPassword(e.target.value)}
         type="password"
       />
-      <Button variant="contained">Login</Button>
+      <Button variant="contained" onClick={() => login(username, password)}>
+        Login
+      </Button>
       <Box sx={{ height: "1px", backgroundColor: "rgb(212, 212, 212)" }} />
       <Typography variant="caption" color="textSecondary">
         First time here? Create an account to join the pool!
