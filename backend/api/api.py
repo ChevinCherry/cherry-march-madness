@@ -59,7 +59,7 @@ async def refreshAccessToken(response: Response, refreshToken: uuid.UUID = Cooki
 
 @app.get("/checkAuth")
 async def checkAuth(accessToken: str = Cookie(None)):
-    tokenData = AuthService.validateAccessToken(token=accessToken)
+    tokenData = AuthService.validateAccessToken(accessToken)
     session = DBDriver.startSession()
     user = AuthService.getAccessTokenUser(session=session, tokenData=tokenData)
     session.close()
@@ -89,7 +89,8 @@ async def getPoolData(poolId: uuid.UUID, accessToken: str = Cookie(None)):
 
 @app.post("/bracket/{bracketSourceId}")
 async def getBracketUpdate(bracketSourceId: uuid.UUID, accessToken: str = Cookie(None)):
-    session = DBDriver.startSession(accessToken)
+    AuthService.validateAccessToken(accessToken)
+    session = DBDriver.startSession()
     bracketData = BracketService.doBracketUpdate(session, bracketSourceId)
     session.commit()
     session.close()

@@ -88,7 +88,8 @@ def validateAccessToken(accessToken: str | None):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing Access Token")
     tokenData =  decodeJWT(accessToken)
     expiryEpoch = tokenData['exp']
-    if type(expiryEpoch) != "int" or expiryEpoch > getDBTimestamp():
+    print(type(expiryEpoch), expiryEpoch, type(expiryEpoch) != int, expiryEpoch < getDBTimestamp())
+    if type(expiryEpoch) != int or expiryEpoch < getDBTimestamp():
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Expired Access Token")
     return tokenData
 
@@ -104,8 +105,8 @@ def getAccessTokenUser(session: Session, tokenData: dict[str, Any]) -> APIUser |
     tokenUserId = tokenData['userId']
     if type(tokenUserId) != str:
         return None
-    userId = UUID(userId)
-    userSelect = select(DBUser).where(DBUser.id == userId)
+    tokenUserId = UUID(tokenUserId)
+    userSelect = select(DBUser).where(DBUser.id == tokenUserId)
     dbUser = session.scalars(userSelect).first()
     if (dbUser == None):
         return None
