@@ -6,22 +6,28 @@ from uuid import UUID
 from utils import getDBTimestamp
 
 def DBPickToAPIPick(dbPick: DBPick) -> APIPick:
+    print(dbPick.id, dbPick.poolId, dbPick.userId)
     return APIPick.model_validate(dbPick, from_attributes=True)
 
 def getAllPoolPicks(session: Session, poolId: str) -> list[APIPick]:
-    pickSelect = select(DBPick).where(DBPick.poolId == poolId)
+    pickSelect = select(DBPick).where(DBPick.poolId == poolId, DBPick.current == True)
     dbPickList = list(session.scalars(pickSelect).all())
     return list(map(DBPickToAPIPick, dbPickList))
 
-def makePick(session: Session, userId: UUID, poolId: UUID, pick: APIPickCreate, timestamp: int | None) -> APIPick:
-    dbPick = DBPick(userId=userId, poolId=poolId, mmlContestId=pick.mmlContestId, mmlTeamId=pick.mmlTeamId, current=True, pickEpoch=timestamp or getDBTimestamp())
-    session.add(dbPick)
-    return DBPickToAPIPick(dbPick)
+def updatePicks(session: Session, userId: UUID, poolId: UUID, makePicks: list[APIPickCreate], deletePicks: list[UUID]) -> list[APIPick]:
+    dbPicks = []
+    allDeletePickIds = deletePicks
+    if (len(makePicks) > 0):
+        existingPickSelect = select(DBPick.id).where(DBPick.poolId == poolId, DBPick.userId == userId, DBPick.current == True, DBPick.mmlContestId.in_([pick.mmlContestId for pick in makePicks]))
+        existingPicksToDelete = list(session.scalars(existingPickSelect).all())
+        allDeletePickIds = existingPicksToDelete + deletePicks
+        now = getDBTimestamp()
+        dbPicks = [DBPick(userId=userId, poolId=poolId, mmlContestId=pick.mmlContestId, mmlTeamId=pick.mmlTeamId, current=True, pickEpoch=now) for pick in makePicks]
+        for dbPick in dbPicks:
+            session.add(dbPick)
+    session.query(DBPick).filter(DBPick.id.in_(allDeletePickIds)).update({"current": False})
+    session.commit()
+    for dbPick in dbPicks:
+        session.refresh(dbPick)
+    return list(map(DBPickToAPIPick, dbPicks))
 
-def makePicks(session: Session, userId: UUID, poolId: UUID, picks: list[APIPickCreate]) -> list[APIPick]: 
-    now = getDBTimestamp()
-    return list(map(lambda pick: makePick(session, userId, poolId, pick, now), picks))
-
-def deletePicks(session: Session, pickIds: list[UUID]):
-    for pickId in pickIds:
-        session.query(DBPick).filter(DBPick.id == pickId).update({"current": False}, synchronize_session=True)

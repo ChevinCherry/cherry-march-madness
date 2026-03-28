@@ -4,6 +4,8 @@ import {
   APIUser,
   APILoginBody,
   APIBracketSource,
+  APIPickCreate,
+  APIPick,
 } from "./api-types";
 
 export class AuthExpiredError extends Error {}
@@ -106,6 +108,7 @@ export class API {
         credentials: "include",
       })
     ).json();
+    console.log(poolData);
     return poolData as APIPoolData;
   }
 
@@ -119,18 +122,22 @@ export class API {
     return bracketData as APIBracketSource;
   }
 
-  static async makePick(
+  static async updatePicks(
     userId: string,
     poolId: string,
-    mmlContestId: number,
-    mmlTeamId: number
-  ) {
+    newPicks: APIPickCreate[],
+    deletePicks: string[]
+  ): Promise<APIPick[]> {
+    console.log(
+      "BODY",
+      JSON.stringify({ userId, poolId, newPicks, deletePicks })
+    );
     return (
-      await API.authedFetch(`${API.root}/makePick`, {
+      await API.authedFetch(`${API.root}/updatePicks`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
-        body: JSON.stringify({ userId, poolId, mmlContestId, mmlTeamId }),
+        body: JSON.stringify({ userId, poolId, newPicks, deletePicks }),
       })
     ).json();
   }

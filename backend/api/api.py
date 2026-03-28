@@ -80,7 +80,7 @@ async def getActivePool(accessToken: str = Cookie(None)):
     AuthService.validateAccessToken(accessToken)
     session = DBDriver.startSession()
     pool = PoolService.getActivePoolData(session)
-    participants = PoolService.getPoolParticipants(session, pool.id)
+    participants = PoolService.getPoolPublicParticipants(session, pool.id)
     picks = PickService.getAllPoolPicks(session, pool.id)
     session.close()
     return APIPoolData(pool=pool, participants=participants, picks=picks)
@@ -90,7 +90,7 @@ async def getPoolData(poolId: uuid.UUID, accessToken: str = Cookie(None)):
     AuthService.validateAccessToken(accessToken)
     session = DBDriver.startSession()
     pool = PoolService.getPoolData(session, poolId)
-    participants = PoolService.getPoolParticipants(session, participants)
+    participants = PoolService.getPoolPublicParticipants(session, pool.id)
     picks = PickService.getAllPoolPicks(session, poolId)
     session.close()
     return APIPoolData(pool=pool, participants=participants, picks=picks)
@@ -107,13 +107,12 @@ async def getBracketUpdate(bracketSourceId: uuid.UUID, accessToken: str = Cookie
     return bracketData
 
 @app.post("/updatePicks")
-async def updatePicks(body: APIUpdatePicksRequestBody = Body(), accessToken: uuid.UUID = Cookie(None)):
+async def updatePicks(body: APIUpdatePicksRequestBody, accessToken: str = Cookie(None)):
+    print(body)
     tokenData = AuthService.validateAccessToken(accessToken)
     AuthService.accessTokenBelongsTo(tokenData=tokenData, userId=body.userId)
     session = DBDriver.startSession()
-    newPicks = PickService.makePicks(session=session, userId=body.userId, poolId=body.poolId, picks=body.newPicks)
-    PickService.deletePicks(session, pickIds=body.deletePicks)
-    session.commit()
+    newPicks = PickService.updatePicks(session=session, userId=body.userId, poolId=body.poolId, makePicks=body.newPicks, deletePicks=body.deletePicks)
     session.close()
     return newPicks
 

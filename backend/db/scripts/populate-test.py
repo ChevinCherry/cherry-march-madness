@@ -7,7 +7,7 @@ if (load_dotenv() == False):
     raise "No .env file was found for setting environment variables"
 
 session = DBDriver.startSession()
-bracketSource = DBBracketSource(name="MML 2024-2025 Bracket", fetchUrl="https://sdataprod.ncaa.com/?operationName=scores_bracket_web&variables={\"seasonYear\":2024}&extensions={\"persistedQuery\":{\"version\":1,\"sha256Hash\":\"9b3e0ae3018a2c3cc81877867705189763367a6fca416a36e5196bb4851470a4\"}}")
+bracketSource = DBBracketSource(name="MML 2024-2025 Bracket", fetchUrl="https://sdataprod.ncaa.com/?operationName=scores_bracket_web&variables={\"seasonYear\":2025}&extensions={\"persistedQuery\":{\"version\":1,\"sha256Hash\":\"e5746c1f7317fbbb07928dee293eb92e7fa30cc349e5ed0c20e45fa94aacc22e\"}}")
 session.add(bracketSource)
 session.commit()
 
@@ -21,7 +21,7 @@ session.commit()
 
 session.refresh(adminUser)
 session.refresh(pool)
-adminParticipant = DBParticipant(userId=adminUser.id, poolId=adminUser.id, joinedEpoch=now, hidden=False, balance=0)
+adminParticipant = DBParticipant(userId=adminUser.id, poolId=pool.id, joinedEpoch=now, hidden=False, balance=0)
 session.add(adminParticipant)
 session.commit()
 

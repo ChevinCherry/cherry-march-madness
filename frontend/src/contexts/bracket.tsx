@@ -28,7 +28,14 @@ interface BracketContext {
 const createTeamMap = (games: MMLContest[]) => {
   return games.reduce((acc, game) => {
     for (const team of game.teams) {
-      acc[team.ncaaOrgId] = team;
+      if (acc[team.ncaaOrgId] === undefined) {
+        const globalTeam = { ...team };
+        delete globalTeam.score;
+        delete globalTeam.isTop;
+        delete globalTeam.isWinner;
+        delete globalTeam.isHome;
+        acc[team.ncaaOrgId] = globalTeam;
+      }
     }
     return acc;
   }, {} as TeamMap);
@@ -57,6 +64,7 @@ const createProgressionMap = (games: MMLContest[]): BracketProgressionMap => {
           toEntry.bottomFrom = entry;
         }
         acc[toGame.contestId] = toEntry;
+        entry.to = toEntry;
       }
     }
     acc[game.contestId] = entry;

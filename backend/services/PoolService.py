@@ -1,7 +1,7 @@
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from db.models import DBPool, DBParticipant
-from api.models import APIPool, APIParticipant
+from db.models import DBPool, DBParticipant, DBUser
+from api.models import APIPool, APIPublicParticipant
 
 def getPoolData(session: Session, poolId: str) -> (APIPool | None):
     poolSelect = select(DBPool).where(DBPool.id == poolId)
@@ -18,7 +18,6 @@ def getActivePoolData(session: Session) -> (APIPool | None):
     print(pool)
     return APIPool.model_validate(pool, from_attributes=True)
 
-def getPoolParticipants(session: Session, poolId: str) -> list[APIParticipant]:
-    participantsSelect = select(DBParticipant).where(DBParticipant.poolId == poolId)
-    participants = list(session.scalars(participantsSelect).all())
-    return list(map(lambda participant: APIParticipant.model_validate(participant, from_attributes=True), participants))
+def getPoolPublicParticipants(session: Session, poolId: str) -> list[APIPublicParticipant]:
+    participantsSelect = select(DBParticipant.userId, DBUser.displayName).join(DBUser).where(DBParticipant.poolId == poolId)
+    return [APIPublicParticipant.model_validate(dict(row), from_attributes=True) for row in session.execute(participantsSelect).mappings()]

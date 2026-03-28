@@ -2,8 +2,10 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { getNCAATeamLogoURL } from "../../utilts";
 import { MMLTeam } from "../../types/mml";
+import { usePoolContext } from "../../contexts/pool";
 
 export interface BracketGameTeamProps {
+  mmlContestId: number;
   position: "top" | "bottom";
   pickedTeam?: MMLTeam;
   actualTeam?: MMLTeam;
@@ -12,7 +14,9 @@ export interface BracketGameTeamProps {
 }
 
 const BracketGameTeam = (props: BracketGameTeamProps) => {
-  const { position, pickedTeam, actualTeam, flipped, onClick } = props;
+  const { mmlContestId, position, pickedTeam, actualTeam, flipped, onClick } =
+    props;
+  const { makePick } = usePoolContext();
   const displayTeam = pickedTeam || actualTeam;
   return (
     <Box
@@ -31,6 +35,18 @@ const BracketGameTeam = (props: BracketGameTeamProps) => {
         borderBottom:
           position === "top" ? "1px solid rgb(212, 212, 212)" : undefined,
         overflow: "hidden",
+        ":hover": {
+          backgroundColor: "rgba(0, 0, 0, 0.1)",
+        },
+        ":active": {
+          boxShadow:
+            "inset 4px 4px 8px rgba(0, 0, 0, 0.2), inset -4px -4px 8px rgba(255, 255, 255, 0.5)",
+        },
+      }}
+      onClick={() => {
+        if (displayTeam) {
+          makePick(mmlContestId, displayTeam.ncaaOrgId);
+        }
       }}
     >
       {displayTeam && (

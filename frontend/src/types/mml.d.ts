@@ -1,7 +1,4 @@
 export interface MMLTeam {
-  isTop: boolean;
-  isHome: boolean;
-  score: number;
   color: string;
   nickname: string;
   wins: number;
@@ -11,7 +8,10 @@ export interface MMLTeam {
   name6Char: string;
   seoname: string;
   nameShort: string;
-  isWinner: boolean;
+  isTop?: boolean;
+  isHome?: boolean;
+  isWinner?: boolean;
+  score?: number;
   __typename: string;
 }
 

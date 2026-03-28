@@ -31,7 +31,7 @@ const BracketColumn = (props: BracketColumnProps) => {
       {games.map((game, index) => {
         const elemArray = [
           <BracketGame
-            key={`game-${game.bracketId}`}
+            key={`game-${game.contestId}`}
             mmlGameData={game}
             flipped={flipped}
           />,

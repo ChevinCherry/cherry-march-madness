@@ -1,3 +1,5 @@
+import { MMLContest } from "./mml";
+
 export type ContestIdMap = {
   [mmlContestId: number]: MMLContest;
 };

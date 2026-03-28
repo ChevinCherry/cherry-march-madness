@@ -32,6 +32,8 @@ class APIPick(APIPickCreate):
     id: UUID
     userId: UUID
     poolId: UUID
+    mmlContestId: int
+    mmlTeamId: int
     pickEpoch: int
     current: bool
 
@@ -46,13 +48,13 @@ class APIPool(BaseModel):
     active: bool
     settings: Any
 
-class APIParticipant(BaseModel):
-    userId: str
+class APIPublicParticipant(BaseModel):
+    userId: UUID
     displayName: str
 
 class APIPoolData(BaseModel):
     pool: APIPool
-    participants: list[APIParticipant]
+    participants: list[APIPublicParticipant]
     picks: list[APIPick]
 
 class APIUpdatePicksRequestBody(BaseModel):

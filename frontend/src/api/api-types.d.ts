@@ -8,11 +8,17 @@ export interface APIUser {
 }
 
 export interface APIPick {
-  playerId: string;
+  id: string;
+  userId: string;
   epoch: number;
-  contestId: number;
-  teamId: number;
+  mmlContestId: number;
+  mmlTeamId: number;
   poolId: string;
+}
+
+export interface APIPickCreate {
+  mmlTeamId: number;
+  mmlContestId: number;
 }
 
 export interface APIPool {
@@ -28,7 +34,7 @@ export interface APIPool {
 }
 
 export interface APIParticipant {
-  id: string;
+  userId: string;
   displayName: string;
 }
 
