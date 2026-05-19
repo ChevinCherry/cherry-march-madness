@@ -2,22 +2,27 @@ import { Box } from "@mui/material";
 import React from "react";
 import BracketGame from "./BracketGame";
 import BracketGameProgression from "./BracketGameProgression";
-import { MMLContest } from "../../types/mml";
+import { MMLContest, MMLTeam } from "../../types/mml";
+import { usePoolContext } from "../../contexts/pool";
+import { useBracketContext } from "../../contexts/bracket";
 
 interface BracketColumnProps {
   games: MMLContest[];
   flipped?: boolean;
-  noProgression?: boolean;
+  championship?: boolean;
 }
 
 const BracketColumn = (props: BracketColumnProps) => {
-  const { games, flipped, noProgression } = props;
+  const { games, flipped, championship } = props;
+  const { teams } = useBracketContext();
+  const { myPicks } = usePoolContext();
+
   return (
     <Box
       sx={{
-        flex: 1,
+        position: "relative",
         display: "grid",
-        gridTemplateColumns: noProgression
+        gridTemplateColumns: championship
           ? "auto"
           : flipped
             ? "3rem auto"
@@ -29,25 +34,57 @@ const BracketColumn = (props: BracketColumnProps) => {
       }}
     >
       {games.map((game, index) => {
+        let myPickedTeam: MMLTeam | undefined = undefined;
+        if (myPicks) {
+          const teamId = myPicks[game.contestId]?.mmlTeamId;
+          if (teamId) {
+            myPickedTeam = teams[teamId];
+          }
+        }
+        const winningTeam = game.teams.reduce(
+          (winner, team) => {
+            if (!team.score) {
+              return winner;
+            } else if (!winner || !winner.score) {
+              return team;
+            } else if (winner.score === team.score) {
+              return undefined;
+            } else if (team.score > winner.score) {
+              return team;
+            }
+            return winner;
+          },
+          undefined as MMLTeam | undefined
+        );
         const elemArray = [
           <BracketGame
             key={`game-${game.contestId}`}
             mmlGameData={game}
             flipped={flipped}
+            pickState={
+              !winningTeam
+                ? "neutral"
+                : winningTeam.ncaaOrgId !== myPickedTeam?.ncaaOrgId
+                  ? "incorrect"
+                  : "correct"
+            }
           />,
           <BracketGameProgression
             key={`prog-${game.bracketId}`}
+            pickedTeam={myPickedTeam}
+            winningTeam={winningTeam}
             direction={
-              games.length <= 1 ? "forward" : index % 2 === 0 ? "down" : "up"
+              championship
+                ? "championship"
+                : games.length <= 1
+                  ? "forward"
+                  : index % 2 === 0
+                    ? "down"
+                    : "up"
             }
             flipped={flipped}
-            color={"rgb(212, 212, 212)"}
           />,
         ];
-
-        if (noProgression) {
-          elemArray.pop();
-        }
         return flipped ? elemArray.reverse() : elemArray;
       })}
     </Box>

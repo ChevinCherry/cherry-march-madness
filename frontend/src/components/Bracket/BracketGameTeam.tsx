@@ -10,14 +10,12 @@ export interface BracketGameTeamProps {
   pickedTeam?: MMLTeam;
   actualTeam?: MMLTeam;
   flipped?: boolean;
-  onClick?: () => void;
 }
 
 const BracketGameTeam = (props: BracketGameTeamProps) => {
-  const { mmlContestId, position, pickedTeam, actualTeam, flipped, onClick } =
-    props;
+  const { mmlContestId, position, pickedTeam, actualTeam, flipped } = props;
   const { makePick } = usePoolContext();
-  const displayTeam = pickedTeam || actualTeam;
+  const displayTeam = actualTeam || pickedTeam;
   return (
     <Box
       sx={{
@@ -29,14 +27,11 @@ const BracketGameTeam = (props: BracketGameTeamProps) => {
         gap: "1rem",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "rgba(0, 0, 0, 0.05)",
         borderRadius:
           position === "top" ? "0.5rem 0.5rem 0 0" : "0 0 0.5rem 0.5rem",
-        borderBottom:
-          position === "top" ? "1px solid rgb(212, 212, 212)" : undefined,
         overflow: "hidden",
         ":hover": {
-          backgroundColor: "rgba(0, 0, 0, 0.1)",
+          backgroundColor: "rgba(0, 0, 0, 0.05)",
         },
         ":active": {
           boxShadow:

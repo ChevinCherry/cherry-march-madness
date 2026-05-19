@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { segmentArray } from "../../utilts";
 import BracketColumn from "./BracketColumn";
 import CanvasController from "../CanvasController";
@@ -42,12 +42,22 @@ const Bracket = () => {
           <BracketColumn games={sweet16Left} />
           <BracketColumn games={elite8Left} />
           <BracketColumn games={final4Left} />
-          <BracketColumn games={championship} noProgression={true} />
+          <BracketColumn games={championship} championship={true} />
           <BracketColumn games={final4Right} flipped={true} />
           <BracketColumn games={elite8Right} flipped={true} />
           <BracketColumn games={sweet16Right} flipped={true} />
           <BracketColumn games={round32Right} flipped={true} />
           <BracketColumn games={round64Right} flipped={true} />
+          <Box
+            sx={{
+              position: "absolute",
+              top: 0,
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
+          >
+            <Typography>Bracket</Typography>
+          </Box>
         </Box>
       </CanvasController>
     </Box>

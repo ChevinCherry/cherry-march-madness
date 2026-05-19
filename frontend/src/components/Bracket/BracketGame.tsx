@@ -4,14 +4,17 @@ import BracketGameTeam from "./BracketGameTeam";
 import { MMLContest, MMLTeam } from "../../types/mml";
 import { useBracketContext } from "../../contexts/bracket";
 import { usePoolContext } from "../../contexts/pool";
+import { useThemeContext } from "../../contexts/theme";
 
 export interface BracketGameProps {
   mmlGameData: MMLContest;
   flipped?: boolean;
+  pickState?: "correct" | "incorrect" | "neutral";
 }
 
 const BracketGame = (props: BracketGameProps) => {
-  const { mmlGameData, flipped } = props;
+  const { mmlGameData, flipped, pickState = "neutral" } = props;
+  const { theme } = useThemeContext();
   const actualTopTeam = mmlGameData.teams.find((team) => team.isTop);
   const actualBottomTeam = mmlGameData.teams.find((team) => !team.isTop);
 
@@ -36,6 +39,12 @@ const BracketGame = (props: BracketGameProps) => {
       bottomPickedTeam = teams[bottomPick.mmlTeamId];
     }
   }
+  const borderColor =
+    pickState === "correct"
+      ? theme.palette.correct.default
+      : pickState === "incorrect"
+        ? theme.palette.incorrect.default
+        : theme.palette.neutral.default;
   return (
     <Box
       sx={{
@@ -45,8 +54,14 @@ const BracketGame = (props: BracketGameProps) => {
           "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);",
         height: "5rem",
         width: "15rem",
-        border: "1px solid rgba(212, 212, 212)",
+        border: `1px solid ${borderColor}`,
         borderRadius: "0.5rem",
+        backgroundColor:
+          pickState === "correct"
+            ? theme.palette.correct.light
+            : pickState === "incorrect"
+              ? theme.palette.incorrect.light
+              : theme.palette.neutral.light,
       }}
     >
       <BracketGameTeam
@@ -56,6 +71,7 @@ const BracketGame = (props: BracketGameProps) => {
         pickedTeam={topPickedTeam}
         flipped={flipped}
       />
+      <Box sx={{ height: "1px", backgroundColor: "rgba(0, 0, 0, 0.1)" }} />
       <BracketGameTeam
         mmlContestId={mmlGameData.contestId}
         position="bottom"
