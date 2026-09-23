@@ -134,6 +134,9 @@ export const PoolProvider = ({ children }: PoolProviderProps) => {
       while (nextGame !== undefined) {
         const nextPick = newPickMap[nextGame.gameData.contestId];
         if (nextPick && nextPick.mmlTeamId === oldPickTeamId) {
+          if (nextPick.id) {
+            deletePicks.push(nextPick.id);
+          }
           delete newPickMap[nextGame.gameData.contestId];
         }
         nextGame = nextGame.to;

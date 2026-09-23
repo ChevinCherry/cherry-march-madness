@@ -3,6 +3,7 @@ import React from "react";
 import { MMLTeam } from "../../types/mml";
 import { getNCAATeamLogoURL } from "../../utilts";
 import { Check, Clear } from "@mui/icons-material";
+import { useThemeContext } from "../../contexts/theme";
 
 interface BracketGameProgressionProps {
   direction: "forward" | "up" | "down" | "championship";
@@ -12,9 +13,6 @@ interface BracketGameProgressionProps {
   flipped?: boolean;
 }
 
-const correctGreen = "rgb(19, 134, 61)";
-const incorrectRed = "rgb(204, 60, 60)";
-const neutralGray = "rgb(212, 212, 212)";
 
 interface ProgressionTeamLogoProps {
   seoname: string;
@@ -23,6 +21,7 @@ interface ProgressionTeamLogoProps {
 
 const ProgressionTeamLogo = (props: ProgressionTeamLogoProps) => {
   const { seoname, incorrect } = props;
+  const { theme } = useThemeContext();
   return (
     <Box sx={{ position: "relative", width: "2rem", height: "2rem" }}>
       <Box
@@ -41,7 +40,7 @@ const ProgressionTeamLogo = (props: ProgressionTeamLogoProps) => {
             left: "50%",
             top: "50%",
             transform: "translate(-50%, -50%)",
-            color: incorrectRed,
+            color: theme.palette.incorrect.default,
           }}
         >
           <Clear sx={{ fontSize: "3rem" }} />
@@ -53,6 +52,7 @@ const ProgressionTeamLogo = (props: ProgressionTeamLogoProps) => {
 
 const BracketGameProgression = (props: BracketGameProgressionProps) => {
   const { direction, flipped, pickedTeam, winningTeam } = props;
+  const { theme } = useThemeContext();
 
   let correctPick: boolean | undefined = undefined;
   if (pickedTeam && winningTeam) {
@@ -65,11 +65,11 @@ const BracketGameProgression = (props: BracketGameProgressionProps) => {
 
   const pathStartColor =
     correctPick === true
-      ? correctGreen
+      ? theme.palette.correct.default
       : correctPick === false
-        ? incorrectRed
-        : neutralGray;
-  const pathEndColor = correctPick === true ? correctGreen : neutralGray;
+        ? theme.palette.incorrect.default
+        : theme.palette.neutral.default;
+  const pathEndColor = correctPick === true ? theme.palette.correct.default : theme.palette.neutral.default;
 
   if (direction === "championship") {
     const championTeam = winningTeam || pickedTeam;
@@ -116,7 +116,7 @@ const BracketGameProgression = (props: BracketGameProgressionProps) => {
                 padding: "1rem",
                 borderRadius: "0.5rem",
                 boxSizing: "border-box",
-                backgroundColor: "rgba(0, 0, 0, 0.05)",
+                backgroundColor: correctPick === true ? theme.palette.correct.light : theme.palette.neutral.light,
               }}
             >
               {championTeam && (
